@@ -1,6 +1,8 @@
 package com.provismet.extradamageenchants;
 
 import net.fabricmc.api.ModInitializer;
+import net.minecraft.util.Identifier;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -12,6 +14,10 @@ public class ExtraDEMain implements ModInitializer {
 	// It is considered best practice to use your mod id as the logger's name.
 	// That way, it's clear which mod wrote info, warnings, and errors.
 	public static final Logger LOGGER = LoggerFactory.getLogger(modid);
+
+	public static Identifier identifier (String path) {
+		return new Identifier(modid, path);
+	}
 
 	@Override
 	public void onInitialize() {
