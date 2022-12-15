@@ -11,7 +11,8 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-import com.provismet.extradamageenchants.ExtraDEMain;
+import com.provismet.extradamageenchants.group.ExtraGroup;
+import com.provismet.extradamageenchants.group.ExtraTypeTags;
 
 @Mixin(LivingEntity.class)
 public abstract class LivingEntityMixin extends Entity {
@@ -19,8 +20,18 @@ public abstract class LivingEntityMixin extends Entity {
 		super(type, world);
 	}
 
-	@Inject(at=@At("TAIL"), method="getGroup")
+	@Inject(at=@At("TAIL"), method="getGroup", cancellable=true)
 	public void getGroup (CallbackInfoReturnable<EntityGroup> cir) {
-		
+		EntityType<?> type = ((LivingEntity)(Object)this).getType();
+
+		if (type.isIn(ExtraTypeTags.OUTERWORLDLY)) cir.setReturnValue(ExtraGroup.OUTERWORDLY);
+		else if (type.isIn(ExtraTypeTags.ARCANE)) cir.setReturnValue(ExtraGroup.ARCANE);
+		else if (type.isIn(ExtraTypeTags.FUNGIFLORAL)) cir.setReturnValue(ExtraGroup.FUNGIFLORAL);
+		else if (type.isIn(ExtraTypeTags.BEASTLY)) cir.setReturnValue(ExtraGroup.BEASTLY);
+		else if (type.isIn(ExtraTypeTags.UNDEAD)) cir.setReturnValue(EntityGroup.UNDEAD);
+		else if (type.isIn(ExtraTypeTags.ARTHROPOD)) cir.setReturnValue(EntityGroup.ARTHROPOD);
+		else if (type.isIn(ExtraTypeTags.ILLAGER)) cir.setReturnValue(EntityGroup.ILLAGER);
+		else if (type.isIn(ExtraTypeTags.AQUATIC)) cir.setReturnValue(EntityGroup.AQUATIC);
+		else if (type.isIn(ExtraTypeTags.HUMANOID)) cir.setReturnValue(ExtraGroup.HUMANOID);
 	}
 }
