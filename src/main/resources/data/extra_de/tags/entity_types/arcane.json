@@ -1,0 +1,10 @@
+{
+    "replace": false,
+    "values": [
+        "minecraft:allay",
+        "minecraft:vex",
+        "minecraft:blaze",
+        "minecraft:iron_golem",
+        "minecraft:snow_golem"
+    ]
+}
