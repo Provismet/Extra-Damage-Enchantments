@@ -6,13 +6,10 @@ import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.provismet.extradamageenchants.enchantment.ExtraEnchants;
+
 public class ExtraDEMain implements ModInitializer {
-	public static final String modid = "ExtraDamageEnchants";
-
-
-	// This logger is used to write text to the console and the log file.
-	// It is considered best practice to use your mod id as the logger's name.
-	// That way, it's clear which mod wrote info, warnings, and errors.
+	public static final String modid = "extra_de";
 	public static final Logger LOGGER = LoggerFactory.getLogger(modid);
 
 	public static Identifier identifier (String path) {
@@ -20,11 +17,7 @@ public class ExtraDEMain implements ModInitializer {
 	}
 
 	@Override
-	public void onInitialize() {
-		// This code runs as soon as Minecraft is in a mod-load-ready state.
-		// However, some things (like resources) may still be uninitialized.
-		// Proceed with mild caution.
-
-		LOGGER.info("Hello Fabric world!");
+	public void onInitialize () {
+		ExtraEnchants.register();
 	}
 }
