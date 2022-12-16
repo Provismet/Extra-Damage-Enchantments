@@ -35,5 +35,13 @@
     "origins": "*",
     "enchantedtooltips": "*",
     "enchdesc": "*"
+  },
+
+  "custom": {
+    "modmenu": {
+      "links": {
+        "wiki.extra_de.link": "https://github.com/Provismet/Extra-Damage-Enchantments/wiki"
+      }
+    }
   }
 }

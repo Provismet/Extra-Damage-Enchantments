@@ -10,5 +10,7 @@
     "enchantment.extra_de.voidrender.desc": "Increases damage and inflicts glow against void-related mobs such as Endermen and Shulkers.",
     "enchantment.extra_de.unravel.desc": "Increases damage and inflicts glow against magic-based mobs such as Blazes and Vexes.",
     "enchantment.extra_de.herbicide.desc": "Increases damage against floral and fungal mobs such as the Warden.",
-    "enchantment.extra_de.butcher.desc": "Increase damage and inflicts slowness against animals and monsters such as Hoglins and Striders."
+    "enchantment.extra_de.butcher.desc": "Increase damage and inflicts slowness against animals and monsters such as Hoglins and Striders.",
+
+    "wiki.extra_de.link": "Wiki"
 }
