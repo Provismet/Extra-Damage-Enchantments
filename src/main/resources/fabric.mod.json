@@ -1,15 +1,17 @@
 {
   "schemaVersion": 1,
-  "id": "extra-damage-enchants",
+  "id": "extra-damage-enchantments",
   "version": "${version}",
 
-  "name": "Extra Damage Enchants",
+  "name": "Extra Damage Enchantments",
   "description": "Adds additional entity groups and associated damage enchantments.",
   "authors": [
     "Provismet"
   ],
   "contact": {
-    "sources": "https://github.com/Provismet/Extra-Damage-Enchantments"
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/extra-damage-enchantments",
+    "sources": "https://github.com/Provismet/Extra-Damage-Enchantments",
+    "issues": "https://github.com/Provismet/Extra-Damage-Enchantments/issues"
   },
 
   "license": "MIT",
@@ -18,7 +20,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.provismet.extradamageenchants.ExtraDEMain"
+      "com.provismet.extradamageenchantments.ExtraDEMain"
     ]
   },
   "mixins": [
@@ -33,6 +35,7 @@
   },
   "suggests": {
     "origins": "*",
+    "extrade_oa": "*",
     "enchantedtooltips": "*",
     "enchdesc": "*"
   },
