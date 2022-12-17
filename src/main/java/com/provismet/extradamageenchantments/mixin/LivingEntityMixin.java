@@ -1,4 +1,4 @@
-package com.provismet.extradamageenchants.mixin;
+package com.provismet.extradamageenchantments.mixin;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityGroup;
@@ -11,8 +11,8 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-import com.provismet.extradamageenchants.group.ExtraGroup;
-import com.provismet.extradamageenchants.group.ExtraTypeTags;
+import com.provismet.extradamageenchantments.group.ExtraGroup;
+import com.provismet.extradamageenchantments.group.ExtraTypeTags;
 
 @Mixin(LivingEntity.class)
 public abstract class LivingEntityMixin extends Entity {

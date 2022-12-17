@@ -1,7 +1,7 @@
-package com.provismet.extradamageenchants.enchantment;
+package com.provismet.extradamageenchantments.enchantment;
 
-import com.provismet.extradamageenchants.ExtraDEMain;
-import com.provismet.extradamageenchants.group.ExtraGroup;
+import com.provismet.extradamageenchantments.ExtraDEMain;
+import com.provismet.extradamageenchantments.group.ExtraGroup;
 
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.EquipmentSlot;

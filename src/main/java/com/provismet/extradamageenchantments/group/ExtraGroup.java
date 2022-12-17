@@ -1,4 +1,4 @@
-package com.provismet.extradamageenchants.group;
+package com.provismet.extradamageenchantments.group;
 
 import net.minecraft.entity.EntityGroup;
 

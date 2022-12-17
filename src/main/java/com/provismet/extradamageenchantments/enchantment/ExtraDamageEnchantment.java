@@ -1,6 +1,6 @@
-package com.provismet.extradamageenchants.enchantment;
+package com.provismet.extradamageenchantments.enchantment;
 
-import com.provismet.extradamageenchants.group.ExtraGroup;
+import com.provismet.extradamageenchantments.group.ExtraGroup;
 
 import net.minecraft.enchantment.DamageEnchantment;
 import net.minecraft.enchantment.Enchantment;

@@ -1,6 +1,6 @@
-package com.provismet.extradamageenchants.group;
+package com.provismet.extradamageenchantments.group;
 
-import com.provismet.extradamageenchants.ExtraDEMain;
+import com.provismet.extradamageenchantments.ExtraDEMain;
 
 import net.minecraft.entity.EntityType;
 import net.minecraft.tag.TagKey;

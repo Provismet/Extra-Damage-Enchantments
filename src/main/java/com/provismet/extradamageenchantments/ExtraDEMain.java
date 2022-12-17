@@ -1,4 +1,4 @@
-package com.provismet.extradamageenchants;
+package com.provismet.extradamageenchantments;
 
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.util.Identifier;
@@ -6,7 +6,7 @@ import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.provismet.extradamageenchants.enchantment.ExtraEnchants;
+import com.provismet.extradamageenchantments.enchantment.ExtraEnchants;
 
 public class ExtraDEMain implements ModInitializer {
 	public static final String modid = "extra_de";
