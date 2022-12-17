@@ -2,6 +2,10 @@
     "replace": false,
     "values": [
         "minecraft:mooshroom",
-        "minecraft:warden"
+        "minecraft:creeper",
+        {
+            "id": "minecraft:warden",
+            "required": false
+        }
     ]
 }
