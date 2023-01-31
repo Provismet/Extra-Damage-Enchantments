@@ -3,8 +3,8 @@ package com.provismet.extradamageenchantments.group;
 import com.provismet.extradamageenchantments.ExtraDEMain;
 
 import net.minecraft.entity.EntityType;
-import net.minecraft.tag.TagKey;
-import net.minecraft.util.registry.Registry;
+import net.minecraft.registry.RegistryKeys;
+import net.minecraft.registry.tag.TagKey;
 
 public class ExtraTypeTags {
     public static final TagKey<EntityType<?>> HUMANOID = ExtraTypeTags.of("humanoid");
@@ -19,6 +19,6 @@ public class ExtraTypeTags {
     public static final TagKey<EntityType<?>> AQUATIC = ExtraTypeTags.of("aquatic");
 
     private static TagKey<EntityType<?>> of (String path) {
-        return TagKey.of(Registry.ENTITY_TYPE_KEY, ExtraDEMain.identifier(path));
+        return TagKey.of(RegistryKeys.ENTITY_TYPE, ExtraDEMain.identifier(path));
     }
 }
