@@ -1,4 +1,6 @@
 {
+    "gamerule.specialEnchantAgainstPlayersPercentEffectiveness": "Special Enchantment Effectiveness Against Players",
+
     "enchantment.extra_de.rebel": "Rebel",
     "enchantment.extra_de.voidrender": "Voidrender",
     "enchantment.extra_de.unravel": "Unravel",

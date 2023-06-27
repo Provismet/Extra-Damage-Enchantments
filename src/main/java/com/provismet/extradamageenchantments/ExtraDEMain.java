@@ -19,5 +19,6 @@ public class ExtraDEMain implements ModInitializer {
 	@Override
 	public void onInitialize () {
 		ExtraEnchants.register();
+		ExtraGameRules.register();
 	}
 }
