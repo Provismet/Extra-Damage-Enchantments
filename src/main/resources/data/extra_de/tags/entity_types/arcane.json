@@ -1,10 +1,7 @@
 {
     "replace": false,
     "values": [
-        {
-            "id": "minecraft:allay",
-            "required": false
-        },
+        "minecraft:allay",
         "minecraft:vex",
         "minecraft:blaze",
         "minecraft:iron_golem",

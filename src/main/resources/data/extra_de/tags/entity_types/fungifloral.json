@@ -3,9 +3,6 @@
     "values": [
         "minecraft:mooshroom",
         "minecraft:creeper",
-        {
-            "id": "minecraft:warden",
-            "required": false
-        }
+        "minecraft:warden"
     ]
 }

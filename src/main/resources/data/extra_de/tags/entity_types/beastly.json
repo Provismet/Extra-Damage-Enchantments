@@ -21,6 +21,8 @@
         "minecraft:ocelot",
         "minecraft:rabbit",
         "minecraft:strider",
-        "minecraft:ravager"
+        "minecraft:ravager",
+        "minecraft:camel",
+        "minecraft:sniffer"
     ]
 }
