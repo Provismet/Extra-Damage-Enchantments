@@ -18,3 +18,15 @@ This mod adds additional entity groups to Minecraft alongside additional enchant
 - Beastly
   - Receives extra damage from the Butcher enchantment.
   - Consists of animal and beastlike mobs (Cows, Hoglins, etc).
+
+## Compatibility Mods
+- [ExtraDE Origins Addon](https://github.com/Provismet/ExtraDE-Origins-Addon)
+  - ExtraDE entity groups can be applied to Origins.
+- [ExtraDE Neat](https://github.com/Provismet/ExtraDE-Neat-Compat)
+  - Adds icons to Neat's healthbars to display the entity groupings from ExtraDE.
+
+## Download Links
+- [Modrinth](https://modrinth.com/mod/extra-damage-enchantments)
+- [CurseForge](https://www.curseforge.com/minecraft/mc-mods/extra-damage-enchantments)
+
+Use these links to better support the mod.
