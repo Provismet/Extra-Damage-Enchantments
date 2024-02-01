@@ -1,0 +1,14 @@
+{
+    "required": true,
+    "minVersion": "0.8",
+    "package": "com.provismet.extradamageenchantments.mixin.neat",
+    "compatibilityLevel": "JAVA_17",
+    "mixins": [],
+    "client": [
+      "HealthBarRendererMixin"
+    ],
+    "injectors": {
+      "defaultRequire": 0
+    }
+  }
+  

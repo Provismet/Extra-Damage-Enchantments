@@ -4,7 +4,7 @@
   "version": "${version}",
 
   "name": "Extra Damage Enchantments",
-  "description": "Adds additional entity groups and associated damage enchantments.",
+  "description": "Adds additional entity groups as datapack tags and adds enchantments that act on them.",
   "authors": [
     "Provismet"
   ],
@@ -21,17 +21,27 @@
   "entrypoints": {
     "main": [
       "com.provismet.extradamageenchantments.ExtraDEMain"
+    ],
+    "fabric-datagen": [
+      "com.provismet.generated.extradamageenchantments.ExtraDEDatagen"
+    ],
+    "provihealth": [
+      "com.provismet.extradamageenchantments.compat.HealthEntrypoint"
     ]
   },
   "mixins": [
-    "extrade.mixins.json"
+    "extrade.mixins.json",
+    "extrade.neat.mixins.json"
   ],
 
   "depends": {
-    "fabricloader": ">=0.14.6",
+    "fabricloader": ">=0.15.0",
     "fabric-api": "*",
     "minecraft": "~1.20",
     "java": ">=17"
+  },
+  "recommends": {
+    "provihealth": "*"
   },
   "suggests": {
     "origins": "*",
