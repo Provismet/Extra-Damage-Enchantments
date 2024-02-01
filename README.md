@@ -8,29 +8,36 @@
 </div>
 
 ## Description
+A modpack utility mod masquerading as an enchantment mod. Extra Damage Enchantments connects datapacks to the "entity group" system, and additionally
+adds 5 new damaging enchantments to make use of the new system.
 
-This mod adds additional entity groups to Minecraft alongside additional enchantments that deal extra damage to them (similiar to Smite or Bane of Arthropods).
-- Humanoid
+An issue with modpacks is that new mobs often don't fall into the vanilla categories of undead, arthropod, and aquatic. ExtraDE adds 5 additional
+categories that cover the majority of use-cases.  
+Each category, along with the vanilla groupings, is a datapack tag. This creates a convenient compatibility layer for modpacks to use and add additional
+mobs.
+
+ExtraDE also adds custom group icons for Provi's Health Bars and Neat. Using PHB will also grant new custom health bar portraits.
+
+## New Entity Groups
+- Humanoid (`extra_de:humanoid`)
   - Receives extra damage from the Rebel enchantment.
   - Consists of human and humanlike mobs (Players, Villagers, Piglins).
-- OuterWorldly
+- OuterWorldly (`extra_de:outerworldly`)
   - Receives extra damage from the Voidrender enchantment.
   - Consists of _dimensional_ mobs (Endermen, Ender Dragon).
-- Arcane
+- Arcane (`extra_de:arcane`)
   - Receives extra damage from the Unravel enchantment.
   - Consists of mobs that are _made of magic_ (Allays, Vexes).
-- FungiFloral
+- FungiFloral (`extra_de:fungifloral`)
   - Receives extra damage from the Herbicide enchantment.
   - Consists of plantlike and mushroomlike mobs (Mooshrooms, Wardens).
-- Beastly
+- Beastly (`extra_de:beastly`)
   - Receives extra damage from the Butcher enchantment.
   - Consists of animal and beastlike mobs (Cows, Hoglins, etc).
 
 ## Compatibility Mods
 - [ExtraDE Origins Addon](https://github.com/Provismet/ExtraDE-Origins-Addon)
   - ExtraDE entity groups can be applied to Origins.
-- [ExtraDE Neat](https://github.com/Provismet/ExtraDE-Neat-Compat)
-  - Adds icons to Neat's healthbars to display the entity groupings from ExtraDE.
 
 ## Download Links
 - [Modrinth](https://modrinth.com/mod/extra-damage-enchantments)
