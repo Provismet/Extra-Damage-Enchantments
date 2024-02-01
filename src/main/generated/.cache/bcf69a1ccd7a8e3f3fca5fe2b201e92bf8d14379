@@ -1,10 +1,10 @@
-// 1.20.1	2024-02-01T01:42:09.4788015	Extra Damage Enchantments/Tags for minecraft:entity_type
+// 1.20.1	2024-02-01T02:01:53.039025	Extra Damage Enchantments/Tags for minecraft:entity_type
 8a23702b05296c8af5014d6aa6e9265ded85c7d9 data\extra_de\tags\entity_types\undead.json
 8a23702b05296c8af5014d6aa6e9265ded85c7d9 data\extra_de\tags\entity_types\illager.json
 e9f47ad4f91714a7457ef14121253fdb174a10e1 data\extra_de\tags\entity_types\arcane.json
 8a23702b05296c8af5014d6aa6e9265ded85c7d9 data\extra_de\tags\entity_types\aquatic.json
 ed5fdb9f2f39808b5076c84a19bd66a514e3edfa data\extra_de\tags\entity_types\beastly.json
 7886a4a1c4a77abc35e19cfd539060a568015a83 data\extra_de\tags\entity_types\outerworldly.json
-63030a8178c2f66d2bf32ef3f738b0f0ac99a18f data\extra_de\tags\entity_types\humanoid.json
 27affd7b99c35d0145b55b7f4ee0e269b15d76f1 data\extra_de\tags\entity_types\fungifloral.json
+63030a8178c2f66d2bf32ef3f738b0f0ac99a18f data\extra_de\tags\entity_types\humanoid.json
 8a23702b05296c8af5014d6aa6e9265ded85c7d9 data\extra_de\tags\entity_types\arthropod.json
