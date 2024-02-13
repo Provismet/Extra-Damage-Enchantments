@@ -4,7 +4,7 @@
   "version": "${version}",
 
   "name": "Extra Damage Enchantments",
-  "description": "Adds additional entity groups as datapack tags and adds enchantments that act on them.",
+  "description": "Adds additional entity groups as datapack tags and adds enchantments that act on them. Part of the Combat+ collection.",
   "authors": [
     "Provismet"
   ],
@@ -15,7 +15,7 @@
   },
 
   "license": "MIT",
-  "icon": "assets/extra_de/icon.png",
+  "icon": "assets/extra-damage-enchantments/icon.png",
 
   "environment": "*",
   "entrypoints": {
@@ -23,7 +23,7 @@
       "com.provismet.extradamageenchantments.ExtraDEMain"
     ],
     "fabric-datagen": [
-      "com.provismet.generated.extradamageenchantments.ExtraDEDatagen"
+      "com.provismet.datagen.extradamageenchantments.ExtraDEDatagen"
     ],
     "provihealth": [
       "com.provismet.extradamageenchantments.compat.HealthEntrypoint"
@@ -38,7 +38,8 @@
     "fabricloader": ">=0.15.0",
     "fabric-api": "*",
     "minecraft": "~1.20",
-    "java": ">=17"
+    "java": ">=17",
+    "combat-plus": "*"
   },
   "recommends": {
     "provihealth": "*"
@@ -53,7 +54,7 @@
   "custom": {
     "modmenu": {
       "links": {
-        "wiki.extra_de.link": "https://github.com/Provismet/Extra-Damage-Enchantments/wiki"
+        "wiki.lilylib.link": "https://github.com/Provismet/Extra-Damage-Enchantments/wiki"
       }
     }
   }

@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "extra-damage-enchantments:butcher",
+    "extra-damage-enchantments:herbicide",
+    "extra-damage-enchantments:rebel",
+    "extra-damage-enchantments:unravel",
+    "extra-damage-enchantments:voidrender"
+  ]
+}

@@ -1,4 +1,4 @@
-package com.provismet.generated.extradamageenchantments;
+package com.provismet.datagen.extradamageenchantments;
 
 import java.util.concurrent.CompletableFuture;
 

@@ -9,11 +9,11 @@ import org.slf4j.LoggerFactory;
 import com.provismet.extradamageenchantments.enchantment.ExtraEnchants;
 
 public class ExtraDEMain implements ModInitializer {
-	public static final String modid = "extra_de";
-	public static final Logger LOGGER = LoggerFactory.getLogger(modid);
+	public static final String MODID = "extra-damage-enchantments";
+	public static final Logger LOGGER = LoggerFactory.getLogger(MODID);
 
 	public static Identifier identifier (String path) {
-		return new Identifier(modid, path);
+		return new Identifier(MODID, path);
 	}
 
 	@Override

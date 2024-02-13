@@ -1,5 +1,8 @@
 package com.provismet.extradamageenchantments.enchantment;
 
+import com.provismet.CombatPlusCore.interfaces.CPCEnchantment;
+import com.provismet.extradamageenchantments.ExtraGameRules;
+
 import net.minecraft.enchantment.DamageEnchantment;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.Entity;
@@ -8,8 +11,9 @@ import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.player.PlayerEntity;
 
-public class ExtraDamageEnchantment extends DamageEnchantment {
+public class ExtraDamageEnchantment extends DamageEnchantment implements CPCEnchantment {
     private static final int BASE_POWER = 5;
     private static final int POWER_PER_LEVEL = 8;
     private static final int MIN_MAX_POWER_DIFFERENCE = 20;
@@ -51,16 +55,23 @@ public class ExtraDamageEnchantment extends DamageEnchantment {
 
     @Override
     public float getAttackDamage (int level, EntityGroup entityGroup) {
-        for (EntityGroup preferred : this.preferredGroups) {
-            if (preferred == entityGroup) return (float)level * 2.5f;
+        return 0f;
+    }
+
+    @Override
+    public float getAttackDamage (int level, EquipmentSlot slot, LivingEntity user, LivingEntity target) {
+        if (slot == EquipmentSlot.MAINHAND && this.isPreferred(target.getGroup())) {
+            float damage = (float)level * 2.5f;
+            if (target instanceof PlayerEntity) damage *= (float)user.getWorld().getGameRules().get(ExtraGameRules.PLAYER_ENCHANTMENT_DAMAGE_MOD).get();
+            return damage;
         }
-        return 0.0f;
+        return 0f;
     }
 
     @Override
     public void onTargetDamaged (LivingEntity user, Entity target, int level) {
         if (target instanceof LivingEntity livingEntity) {
-            if (isPreferred(livingEntity.getGroup()) && this.status != null) {
+            if (this.isPreferred(livingEntity.getGroup()) && this.status != null) {
                 int randomModifier = user.getRandom().nextInt(10 * level);
                 livingEntity.addStatusEffect(new StatusEffectInstance(this.status, this.effectDuration + randomModifier, this.effectAmplifier), user);
             }

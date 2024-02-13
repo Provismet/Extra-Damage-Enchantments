@@ -1,4 +1,4 @@
-package com.provismet.generated.extradamageenchantments;
+package com.provismet.datagen.extradamageenchantments;
 
 import com.provismet.extradamageenchantments.ExtraGameRules;
 import com.provismet.extradamageenchantments.enchantment.ExtraEnchants;
@@ -22,8 +22,6 @@ public class LanguageGen extends FabricLanguageProvider {
 
         translationBuilder.add(ExtraGameRules.PLAYER_ENCHANTMENT_DAMAGE_MOD.getTranslationKey(), "PvP effectiveness of extra damage enchantments");
         translationBuilder.add(ExtraGameRules.PLAYER_ENCHANTMENT_DAMAGE_MOD.getTranslationKey() + ".description", "Bonus damage from extra damage enchantments (such as Rebel) will be multiplied by this value if the target is a player.");
-
-        translationBuilder.add("wiki.extra_de.link", "Wiki");
     }
     
     private static void addEnchantment (TranslationBuilder translationBuilder, Enchantment enchantment, String name, String description) {

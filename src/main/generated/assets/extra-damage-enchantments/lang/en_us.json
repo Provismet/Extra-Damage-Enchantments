@@ -1,15 +1,14 @@
 {
-  "enchantment.extra_de.butcher": "Butcher",
-  "enchantment.extra_de.butcher.desc": "Increase damage and inflicts slowness against animals and monsters such as Hoglins and Striders.",
-  "enchantment.extra_de.herbicide": "Herbicide",
-  "enchantment.extra_de.herbicide.desc": "Increases damage against floral and fungal mobs such as creepers.",
-  "enchantment.extra_de.rebel": "Rebel",
-  "enchantment.extra_de.rebel.desc": "Increases damage against humanoid mobs such as Piglins and Villagers.",
-  "enchantment.extra_de.unravel": "Unravel",
-  "enchantment.extra_de.unravel.desc": "Increases damage and inflicts glow against magic-based mobs such as Blazes and Vexes.",
-  "enchantment.extra_de.voidrender": "Voidrender",
-  "enchantment.extra_de.voidrender.desc": "Increases damage and inflicts glow against void-related mobs such as Endermen and Shulkers.",
-  "gamerule.specialEnchantAgainstPlayersPercentEffectiveness": "PvP effectiveness of extra damage enchantments",
-  "gamerule.specialEnchantAgainstPlayersPercentEffectiveness.description": "Bonus damage from extra damage enchantments (such as Rebel) will be multiplied by this value if the target is a player.",
-  "wiki.extra_de.link": "Wiki"
+  "enchantment.extra-damage-enchantments.butcher": "Butcher",
+  "enchantment.extra-damage-enchantments.butcher.desc": "Increase damage and inflicts slowness against animals and monsters such as Hoglins and Striders.",
+  "enchantment.extra-damage-enchantments.herbicide": "Herbicide",
+  "enchantment.extra-damage-enchantments.herbicide.desc": "Increases damage against floral and fungal mobs such as creepers.",
+  "enchantment.extra-damage-enchantments.rebel": "Rebel",
+  "enchantment.extra-damage-enchantments.rebel.desc": "Increases damage against humanoid mobs such as Piglins and Villagers.",
+  "enchantment.extra-damage-enchantments.unravel": "Unravel",
+  "enchantment.extra-damage-enchantments.unravel.desc": "Increases damage and inflicts glow against magic-based mobs such as Blazes and Vexes.",
+  "enchantment.extra-damage-enchantments.voidrender": "Voidrender",
+  "enchantment.extra-damage-enchantments.voidrender.desc": "Increases damage and inflicts glow against void-related mobs such as Endermen and Shulkers.",
+  "gamerule.damageEnchantAgainstPlayerEffectiveness": "PvP effectiveness of extra damage enchantments",
+  "gamerule.damageEnchantAgainstPlayerEffectiveness.description": "Bonus damage from extra damage enchantments (such as Rebel) will be multiplied by this value if the target is a player."
 }
