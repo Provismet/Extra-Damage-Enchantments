@@ -1,10 +1,11 @@
-// 1.20.1	2024-02-09T05:06:53.7128462	Extra Damage Enchantments/Tags for minecraft:entity_type
-8a23702b05296c8af5014d6aa6e9265ded85c7d9 data\extra-damage-enchantments\tags\entity_types\undead.json
-27affd7b99c35d0145b55b7f4ee0e269b15d76f1 data\extra-damage-enchantments\tags\entity_types\fungifloral.json
-7886a4a1c4a77abc35e19cfd539060a568015a83 data\extra-damage-enchantments\tags\entity_types\outerworldly.json
-8a23702b05296c8af5014d6aa6e9265ded85c7d9 data\extra-damage-enchantments\tags\entity_types\illager.json
-8a23702b05296c8af5014d6aa6e9265ded85c7d9 data\extra-damage-enchantments\tags\entity_types\arthropod.json
-63030a8178c2f66d2bf32ef3f738b0f0ac99a18f data\extra-damage-enchantments\tags\entity_types\humanoid.json
-e9f47ad4f91714a7457ef14121253fdb174a10e1 data\extra-damage-enchantments\tags\entity_types\arcane.json
-ed5fdb9f2f39808b5076c84a19bd66a514e3edfa data\extra-damage-enchantments\tags\entity_types\beastly.json
-8a23702b05296c8af5014d6aa6e9265ded85c7d9 data\extra-damage-enchantments\tags\entity_types\aquatic.json
+// 1.20.6	2024-05-15T04:45:06.4633437	Extra Damage Enchantments/Tags for minecraft:entity_type
+f9bccb438ae1e63bdbcf555e7828419f7b0f1ae3 data\extra-damage-enchantments\tags\entity_types\sensitive_to_butcher.json
+07965a2471c97e58d1079383aecb1e4a0adb5008 data\extra-damage-enchantments\tags\entity_types\fungifloral.json
+7cbb50807a594706253ffc05778de6d0f96ca156 data\extra-damage-enchantments\tags\entity_types\outerworldly.json
+473c2dc145b255f4fcf76f233738def0e51d68aa data\extra-damage-enchantments\tags\entity_types\sensitive_to_herbicide.json
+b96a0dec609e2b5b55da46c87cc8c3ef24bdcdfe data\extra-damage-enchantments\tags\entity_types\sensitive_to_rebel.json
+1530b1b952c0564798df7b29c3afe4a8a1cc070d data\extra-damage-enchantments\tags\entity_types\humanoid.json
+d0de2e9db49e72e247811ac63b86ad21545de6fc data\extra-damage-enchantments\tags\entity_types\sensitive_to_voidrender.json
+5b56f7fa725d7f41127afbcfabc8233caa1e8a47 data\extra-damage-enchantments\tags\entity_types\sensitive_to_unravel.json
+14fcd383cae06fa852d973cc44facac7ccd03138 data\extra-damage-enchantments\tags\entity_types\arcane.json
+5847985aa67b6ba0594e3cb47e05782116600c20 data\extra-damage-enchantments\tags\entity_types\beastly.json

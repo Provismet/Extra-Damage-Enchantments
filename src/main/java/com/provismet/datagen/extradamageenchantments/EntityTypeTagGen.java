@@ -8,6 +8,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider.EntityTypeTagProvider;
 import net.minecraft.entity.EntityType;
 import net.minecraft.registry.RegistryWrapper.WrapperLookup;
+import net.minecraft.registry.tag.EntityTypeTags;
 
 public class EntityTypeTagGen extends EntityTypeTagProvider {
     public EntityTypeTagGen (FabricDataOutput output, CompletableFuture<WrapperLookup> completableFuture) {
@@ -26,54 +27,66 @@ public class EntityTypeTagGen extends EntityTypeTagProvider {
             .add(EntityType.VEX);
         
         getOrCreateTagBuilder(ExtraTypeTags.BEASTLY)
-            .add(EntityType.BAT)
-            .add(EntityType.CAMEL)
-            .add(EntityType.CAT)
-            .add(EntityType.CHICKEN)
-            .add(EntityType.COW)
-            .add(EntityType.DONKEY)
-            .add(EntityType.FOX)
-            .add(EntityType.GHAST)
-            .add(EntityType.GOAT)
-            .add(EntityType.HOGLIN)
-            .add(EntityType.HORSE)
-            .add(EntityType.LLAMA)
-            .add(EntityType.MULE)
-            .add(EntityType.OCELOT)
-            .add(EntityType.PANDA)
-            .add(EntityType.PARROT)
-            .add(EntityType.PIG)
-            .add(EntityType.POLAR_BEAR)
-            .add(EntityType.RABBIT)
-            .add(EntityType.RAVAGER)
-            .add(EntityType.SHEEP)
-            .add(EntityType.SNIFFER)
-            .add(EntityType.STRIDER)
-            .add(EntityType.TRADER_LLAMA)
-            .add(EntityType.WOLF);
+                .add(EntityType.BAT)
+                .add(EntityType.CAMEL)
+                .add(EntityType.CAT)
+                .add(EntityType.CHICKEN)
+                .add(EntityType.COW)
+                .add(EntityType.DONKEY)
+                .add(EntityType.FOX)
+                .add(EntityType.GHAST)
+                .add(EntityType.GOAT)
+                .add(EntityType.HOGLIN)
+                .add(EntityType.HORSE)
+                .add(EntityType.LLAMA)
+                .add(EntityType.MULE)
+                .add(EntityType.OCELOT)
+                .add(EntityType.PANDA)
+                .add(EntityType.PARROT)
+                .add(EntityType.PIG)
+                .add(EntityType.POLAR_BEAR)
+                .add(EntityType.RABBIT)
+                .add(EntityType.RAVAGER)
+                .add(EntityType.SHEEP)
+                .add(EntityType.SNIFFER)
+                .add(EntityType.STRIDER)
+                .add(EntityType.TRADER_LLAMA)
+                .add(EntityType.WOLF)
+                .add(EntityType.ARMADILLO);
 
         getOrCreateTagBuilder(ExtraTypeTags.FUNGIFLORAL)
-            .add(EntityType.CREEPER)
-            .add(EntityType.MOOSHROOM)
-            .add(EntityType.WARDEN);
+                .add(EntityType.CREEPER)
+                .add(EntityType.MOOSHROOM)
+                .add(EntityType.WARDEN);
 
         getOrCreateTagBuilder(ExtraTypeTags.HUMANOID)
-            .add(EntityType.PIGLIN)
-            .add(EntityType.PIGLIN_BRUTE)
-            .add(EntityType.PLAYER)
-            .add(EntityType.VILLAGER)
-            .add(EntityType.WANDERING_TRADER)
-            .add(EntityType.WITCH);
+                .add(EntityType.PIGLIN)
+                .add(EntityType.PIGLIN_BRUTE)
+                .add(EntityType.PLAYER)
+                .add(EntityType.VILLAGER)
+                .add(EntityType.WANDERING_TRADER)
+                .add(EntityType.WITCH);
 
         getOrCreateTagBuilder(ExtraTypeTags.OUTERWORLDLY)
-            .add(EntityType.ENDERMAN)
-            .add(EntityType.ENDER_DRAGON)
-            .add(EntityType.SHULKER);
+                .add(EntityType.ENDERMAN)
+                .add(EntityType.ENDER_DRAGON)
+                .add(EntityType.SHULKER);
 
-        getOrCreateTagBuilder(ExtraTypeTags.AQUATIC);
-        getOrCreateTagBuilder(ExtraTypeTags.ARTHROPOD);
-        getOrCreateTagBuilder(ExtraTypeTags.ILLAGER);
-        getOrCreateTagBuilder(ExtraTypeTags.UNDEAD);
+        getOrCreateTagBuilder(ExtraTypeTags.SENSITIVE_TO_UNRAVEL)
+                .addOptionalTag(ExtraTypeTags.ARCANE);
+
+        getOrCreateTagBuilder(ExtraTypeTags.SENSITIVE_TO_BUTCHER)
+                .addOptionalTag(ExtraTypeTags.BEASTLY);
+
+        getOrCreateTagBuilder(ExtraTypeTags.SENSITIVE_TO_HERBICIDE)
+                .addOptionalTag(ExtraTypeTags.FUNGIFLORAL);
+
+        getOrCreateTagBuilder(ExtraTypeTags.SENSITIVE_TO_REBEL)
+                .addOptionalTag(ExtraTypeTags.HUMANOID)
+                .addOptionalTag(EntityTypeTags.ILLAGER);
+
+        getOrCreateTagBuilder(ExtraTypeTags.SENSITIVE_TO_VOIDRENDER)
+                .addOptionalTag(ExtraTypeTags.OUTERWORLDLY);
     }
     
 }

@@ -1,5 +1,4 @@
 {
-  "replace": false,
   "values": [
     "minecraft:bat",
     "minecraft:camel",
@@ -25,6 +24,7 @@
     "minecraft:sniffer",
     "minecraft:strider",
     "minecraft:trader_llama",
-    "minecraft:wolf"
+    "minecraft:wolf",
+    "minecraft:armadillo"
   ]
 }

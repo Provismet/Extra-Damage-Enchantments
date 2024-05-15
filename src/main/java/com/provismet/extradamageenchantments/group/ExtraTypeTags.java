@@ -13,10 +13,11 @@ public class ExtraTypeTags {
     public static final TagKey<EntityType<?>> FUNGIFLORAL = ExtraTypeTags.of("fungifloral");
     public static final TagKey<EntityType<?>> BEASTLY = ExtraTypeTags.of("beastly");
 
-    public static final TagKey<EntityType<?>> UNDEAD = ExtraTypeTags.of("undead");
-    public static final TagKey<EntityType<?>> ARTHROPOD = ExtraTypeTags.of("arthropod");
-    public static final TagKey<EntityType<?>> ILLAGER = ExtraTypeTags.of("illager");
-    public static final TagKey<EntityType<?>> AQUATIC = ExtraTypeTags.of("aquatic");
+    public static final TagKey<EntityType<?>> SENSITIVE_TO_REBEL = ExtraTypeTags.of("sensitive_to_rebel");
+    public static final TagKey<EntityType<?>> SENSITIVE_TO_VOIDRENDER = ExtraTypeTags.of("sensitive_to_voidrender");
+    public static final TagKey<EntityType<?>> SENSITIVE_TO_UNRAVEL = ExtraTypeTags.of("sensitive_to_unravel");
+    public static final TagKey<EntityType<?>> SENSITIVE_TO_HERBICIDE = ExtraTypeTags.of("sensitive_to_herbicide");
+    public static final TagKey<EntityType<?>> SENSITIVE_TO_BUTCHER = ExtraTypeTags.of("sensitive_to_butcher");
 
     private static TagKey<EntityType<?>> of (String path) {
         return TagKey.of(RegistryKeys.ENTITY_TYPE, ExtraDEMain.identifier(path));

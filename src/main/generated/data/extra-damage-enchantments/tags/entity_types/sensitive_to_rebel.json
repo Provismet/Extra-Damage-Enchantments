@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "#extra-damage-enchantments:humanoid",
+      "required": false
+    },
+    {
+      "id": "#minecraft:illager",
+      "required": false
+    }
+  ]
+}

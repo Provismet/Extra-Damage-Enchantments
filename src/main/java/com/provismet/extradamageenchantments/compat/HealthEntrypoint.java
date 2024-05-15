@@ -1,24 +1,26 @@
 package com.provismet.extradamageenchantments.compat;
 
 import com.provismet.extradamageenchantments.ExtraDEMain;
-import com.provismet.extradamageenchantments.group.ExtraGroup;
+import com.provismet.extradamageenchantments.group.ExtraTypeTags;
 import com.provismet.provihealth.api.ProviHealthApi;
 
 import net.minecraft.item.Items;
 
 public class HealthEntrypoint implements ProviHealthApi {
+    private static final int DEFAULT_PRIORITY = -990;
+
     @Override
     public void onInitialize () {
-        this.registerIcon(ExtraGroup.ARCANE, Items.LAPIS_LAZULI);
-        this.registerIcon(ExtraGroup.BEASTLY, Items.BEEF);
-        this.registerIcon(ExtraGroup.FUNGIFLORAL, Items.KELP);
-        this.registerIcon(ExtraGroup.HUMANOID, Items.BOOK);
-        this.registerIcon(ExtraGroup.OUTERWORDLY, Items.ENDER_PEARL);
+        this.registerIcon(ExtraTypeTags.ARCANE, Items.LAPIS_LAZULI, DEFAULT_PRIORITY);
+        this.registerIcon(ExtraTypeTags.BEASTLY, Items.BEEF, DEFAULT_PRIORITY + 1);
+        this.registerIcon(ExtraTypeTags.FUNGIFLORAL, Items.KELP, DEFAULT_PRIORITY + 2);
+        this.registerIcon(ExtraTypeTags.HUMANOID, Items.BOOK, DEFAULT_PRIORITY + 3);
+        this.registerIcon(ExtraTypeTags.OUTERWORLDLY, Items.ENDER_PEARL, DEFAULT_PRIORITY + 4);
 
-        this.registerPortrait(ExtraGroup.ARCANE, ExtraDEMain.identifier("textures/gui/health_bar/arcane.png"));
-        this.registerPortrait(ExtraGroup.BEASTLY, ExtraDEMain.identifier("textures/gui/health_bar/beastly.png"));
-        this.registerPortrait(ExtraGroup.FUNGIFLORAL, ExtraDEMain.identifier("textures/gui/health_bar/fungifloral.png"));
-        this.registerPortrait(ExtraGroup.HUMANOID, ExtraDEMain.identifier("textures/gui/health_bar/humanoid.png"));
-        this.registerPortrait(ExtraGroup.OUTERWORDLY, ExtraDEMain.identifier("textures/gui/health_bar/outerworldly.png"));
+        this.registerPortrait(ExtraTypeTags.ARCANE, ExtraDEMain.identifier("textures/gui/health_bar/arcane.png"), DEFAULT_PRIORITY);
+        this.registerPortrait(ExtraTypeTags.BEASTLY, ExtraDEMain.identifier("textures/gui/health_bar/beastly.png"), DEFAULT_PRIORITY + 1);
+        this.registerPortrait(ExtraTypeTags.FUNGIFLORAL, ExtraDEMain.identifier("textures/gui/health_bar/fungifloral.png"), DEFAULT_PRIORITY + 2);
+        this.registerPortrait(ExtraTypeTags.HUMANOID, ExtraDEMain.identifier("textures/gui/health_bar/humanoid.png"), DEFAULT_PRIORITY + 3);
+        this.registerPortrait(ExtraTypeTags.OUTERWORLDLY, ExtraDEMain.identifier("textures/gui/health_bar/outerworldly.png"), DEFAULT_PRIORITY + 4);
     }
 }
