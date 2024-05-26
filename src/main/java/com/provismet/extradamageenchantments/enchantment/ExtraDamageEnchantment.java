@@ -1,6 +1,7 @@
 package com.provismet.extradamageenchantments.enchantment;
 
 import com.provismet.CombatPlusCore.interfaces.CPCEnchantment;
+import com.provismet.CombatPlusCore.utility.CPCItemTags;
 import com.provismet.extradamageenchantments.ExtraGameRules;
 
 import net.minecraft.enchantment.DamageEnchantment;
@@ -38,7 +39,7 @@ public class ExtraDamageEnchantment extends DamageEnchantment implements CPCEnch
     }
 
     public ExtraDamageEnchantment (Optional<TagKey<EntityType<?>>> applicableEntities, RegistryEntry<StatusEffect> effect, int effectAmplifier, int effectDuration) {
-        this(Enchantment.properties(ItemTags.WEAPON_ENCHANTABLE, ItemTags.SWORD_ENCHANTABLE, 5, 5, Enchantment.leveledCost(5, 8), Enchantment.leveledCost(25, 8), 2, new EquipmentSlot[]{EquipmentSlot.MAINHAND}), applicableEntities, effect, effectAmplifier, effectDuration);
+        this(Enchantment.properties(CPCItemTags.DAMAGE_ENCHANTABLE, CPCItemTags.DAMAGE_PRIMARY_ENCHANTABLE, 5, 5, Enchantment.leveledCost(5, 8), Enchantment.leveledCost(25, 8), 2, new EquipmentSlot[]{EquipmentSlot.MAINHAND}), applicableEntities, effect, effectAmplifier, effectDuration);
     }
 
     public ExtraDamageEnchantment (Optional<TagKey<EntityType<?>>> applicableEntities) {
