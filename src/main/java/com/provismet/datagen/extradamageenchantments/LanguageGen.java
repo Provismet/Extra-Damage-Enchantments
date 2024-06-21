@@ -6,7 +6,9 @@ import com.provismet.extradamageenchantments.enchantment.ExtraEnchants;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 import net.minecraft.enchantment.Enchantment;
+import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.util.Util;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -27,8 +29,8 @@ public class LanguageGen extends FabricLanguageProvider {
         translationBuilder.add(ExtraGameRules.PLAYER_ENCHANTMENT_DAMAGE_MOD.getTranslationKey() + ".description", "Bonus damage from extra damage enchantments (such as Rebel) will be multiplied by this value if the target is a player.");
     }
     
-    private static void addEnchantment (TranslationBuilder translationBuilder, Enchantment enchantment, String name, String description) {
-        translationBuilder.add(enchantment, name);
-        translationBuilder.add(enchantment.getTranslationKey() + ".desc", description);
+    private static void addEnchantment (TranslationBuilder translationBuilder, RegistryKey<Enchantment> enchantment, String name, String description) {
+        translationBuilder.addEnchantment(enchantment, name);
+        translationBuilder.add(Util.createTranslationKey("enchantment", enchantment.getValue()) + ".desc", description);
     }
 }

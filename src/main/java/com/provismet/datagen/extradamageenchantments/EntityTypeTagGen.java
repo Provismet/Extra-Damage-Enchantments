@@ -20,6 +20,7 @@ public class EntityTypeTagGen extends EntityTypeTagProvider {
         getOrCreateTagBuilder(ExtraTypeTags.ARCANE)
             .add(EntityType.ALLAY)
             .add(EntityType.BLAZE)
+            .add(EntityType.BREEZE)
             .add(EntityType.IRON_GOLEM)
             .add(EntityType.MAGMA_CUBE)
             .add(EntityType.SLIME)

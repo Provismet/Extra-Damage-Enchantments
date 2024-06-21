@@ -10,6 +10,7 @@ public class ExtraDEDatagen implements DataGeneratorEntrypoint {
         pack.addProvider(EntityTypeTagGen::new);
         pack.addProvider(EnchantmentTagGen::new);
         pack.addProvider(LanguageGen::new);
+        pack.addProvider(EnchantmentGenerator::new);
     }
     
 }
