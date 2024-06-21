@@ -1,6 +1,5 @@
 package com.provismet.datagen.extradamageenchantments;
 
-import com.provismet.extradamageenchantments.ExtraGameRules;
 import com.provismet.extradamageenchantments.enchantment.ExtraEnchants;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -24,9 +23,6 @@ public class LanguageGen extends FabricLanguageProvider {
         LanguageGen.addEnchantment(translationBuilder, ExtraEnchants.REBEL, "Rebel", "Increases damage against humanoid mobs such as Piglins and Villagers.");
         LanguageGen.addEnchantment(translationBuilder, ExtraEnchants.UNRAVEL, "Unravel", "Increases damage and inflicts glow against magic-based mobs such as Blazes and Vexes.");
         LanguageGen.addEnchantment(translationBuilder, ExtraEnchants.VOIDRENDER, "Voidrender", "Increases damage and inflicts glow against void-related mobs such as Endermen and Shulkers.");
-
-        translationBuilder.add(ExtraGameRules.PLAYER_ENCHANTMENT_DAMAGE_MOD.getTranslationKey(), "PvP effectiveness of extra damage enchantments");
-        translationBuilder.add(ExtraGameRules.PLAYER_ENCHANTMENT_DAMAGE_MOD.getTranslationKey() + ".description", "Bonus damage from extra damage enchantments (such as Rebel) will be multiplied by this value if the target is a player.");
     }
     
     private static void addEnchantment (TranslationBuilder translationBuilder, RegistryKey<Enchantment> enchantment, String name, String description) {
