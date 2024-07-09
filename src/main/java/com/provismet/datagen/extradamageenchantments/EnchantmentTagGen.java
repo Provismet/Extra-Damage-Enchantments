@@ -19,17 +19,17 @@ public class EnchantmentTagGen extends EnchantmentTagProvider {
     @Override
     protected void configure (WrapperLookup arg) {
         getOrCreateTagBuilder(ConventionalEnchantmentTags.WEAPON_DAMAGE_ENHANCEMENTS)
-            .addOptional(ExtraEnchants.BUTCHER)
-            .addOptional(ExtraEnchants.HERBICIDE)
-            .addOptional(ExtraEnchants.REBEL)
-            .addOptional(ExtraEnchants.UNRAVEL)
-            .addOptional(ExtraEnchants.VOIDRENDER);
+            .add(ExtraEnchants.BUTCHER.getKey())
+            .add(ExtraEnchants.HERBICIDE.getKey())
+            .add(ExtraEnchants.REBEL.getKey())
+            .add(ExtraEnchants.UNRAVEL.getKey())
+            .add(ExtraEnchants.VOIDRENDER.getKey());
 
         getOrCreateTagBuilder(EnchantmentTags.DAMAGE_EXCLUSIVE_SET)
-            .addOptional(ExtraEnchants.BUTCHER)
-            .addOptional(ExtraEnchants.HERBICIDE)
-            .addOptional(ExtraEnchants.REBEL)
-            .addOptional(ExtraEnchants.UNRAVEL)
-            .addOptional(ExtraEnchants.VOIDRENDER);
+            .add(ExtraEnchants.BUTCHER.getKey())
+            .add(ExtraEnchants.HERBICIDE.getKey())
+            .add(ExtraEnchants.REBEL.getKey())
+            .add(ExtraEnchants.UNRAVEL.getKey())
+            .add(ExtraEnchants.VOIDRENDER.getKey());
     }
 }

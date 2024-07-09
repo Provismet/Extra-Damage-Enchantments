@@ -1,24 +1,9 @@
 {
   "values": [
-    {
-      "id": "extra-damage-enchantments:butcher",
-      "required": false
-    },
-    {
-      "id": "extra-damage-enchantments:herbicide",
-      "required": false
-    },
-    {
-      "id": "extra-damage-enchantments:rebel",
-      "required": false
-    },
-    {
-      "id": "extra-damage-enchantments:unravel",
-      "required": false
-    },
-    {
-      "id": "extra-damage-enchantments:voidrender",
-      "required": false
-    }
+    "extra-damage-enchantments:butcher",
+    "extra-damage-enchantments:herbicide",
+    "extra-damage-enchantments:rebel",
+    "extra-damage-enchantments:unravel",
+    "extra-damage-enchantments:voidrender"
   ]
 }

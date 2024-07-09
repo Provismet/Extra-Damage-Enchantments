@@ -4,7 +4,7 @@
     "translate": "enchantment.extra-damage-enchantments.rebel"
   },
   "effects": {
-    "minecraft:damage": [
+    "combat-plus:gamerule_damage": [
       {
         "effect": {
           "type": "minecraft:add",

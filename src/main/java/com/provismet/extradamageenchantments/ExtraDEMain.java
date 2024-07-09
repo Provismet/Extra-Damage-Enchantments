@@ -6,8 +6,6 @@ import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.provismet.extradamageenchantments.enchantment.ExtraEnchants;
-
 public class ExtraDEMain implements ModInitializer {
 	public static final String MODID = "extra-damage-enchantments";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MODID);
@@ -18,6 +16,6 @@ public class ExtraDEMain implements ModInitializer {
 
 	@Override
 	public void onInitialize () {
-		ExtraEnchants.register();
+
 	}
 }

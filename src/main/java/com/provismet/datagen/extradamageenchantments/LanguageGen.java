@@ -2,12 +2,10 @@ package com.provismet.datagen.extradamageenchantments;
 
 import com.provismet.extradamageenchantments.enchantment.ExtraEnchants;
 
+import com.provismet.lilylib.container.EnchantmentContainer;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
-import net.minecraft.enchantment.Enchantment;
-import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryWrapper;
-import net.minecraft.util.Util;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -25,8 +23,8 @@ public class LanguageGen extends FabricLanguageProvider {
         LanguageGen.addEnchantment(translationBuilder, ExtraEnchants.VOIDRENDER, "Voidrender", "Increases damage and inflicts glow against void-related mobs such as Endermen and Shulkers.");
     }
     
-    private static void addEnchantment (TranslationBuilder translationBuilder, RegistryKey<Enchantment> enchantment, String name, String description) {
-        translationBuilder.addEnchantment(enchantment, name);
-        translationBuilder.add(Util.createTranslationKey("enchantment", enchantment.getValue()) + ".desc", description);
+    private static void addEnchantment (TranslationBuilder translationBuilder, EnchantmentContainer enchantment, String name, String description) {
+        translationBuilder.add(enchantment.getTranslationKey(), name);
+        translationBuilder.add(enchantment.getTranslationKey("desc"), description);
     }
 }

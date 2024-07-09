@@ -4,6 +4,7 @@
   "package": "com.provismet.extradamageenchantments.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "EnchantmentsMixin"
   ],
   "injectors": {
     "defaultRequire": 1
