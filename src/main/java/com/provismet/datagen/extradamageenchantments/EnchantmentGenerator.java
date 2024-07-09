@@ -1,6 +1,6 @@
 package com.provismet.datagen.extradamageenchantments;
 
-import com.provismet.extradamageenchantments.enchantment.ExtraEnchants;
+import com.provismet.extradamageenchantments.registries.EDEEnchantments;
 import com.provismet.lilylib.datagen.provider.LilyEnchantmentProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.minecraft.registry.RegistryWrapper;
@@ -14,10 +14,10 @@ public class EnchantmentGenerator extends LilyEnchantmentProvider {
 
     @Override
     protected void generate (RegistryWrapper.WrapperLookup wrapperLookup, EnchantmentBuilder builder) {
-        builder.add(ExtraEnchants.REBEL);
-        builder.add(ExtraEnchants.BUTCHER);
-        builder.add(ExtraEnchants.HERBICIDE);
-        builder.add(ExtraEnchants.UNRAVEL);
-        builder.add(ExtraEnchants.VOIDRENDER);
+        builder.add(EDEEnchantments.REBEL);
+        builder.add(EDEEnchantments.BUTCHER);
+        builder.add(EDEEnchantments.HERBICIDE);
+        builder.add(EDEEnchantments.UNRAVEL);
+        builder.add(EDEEnchantments.VOIDRENDER);
     }
 }

@@ -2,7 +2,7 @@ package com.provismet.datagen.extradamageenchantments;
 
 import java.util.concurrent.CompletableFuture;
 
-import com.provismet.extradamageenchantments.enchantment.ExtraEnchants;
+import com.provismet.extradamageenchantments.registries.EDEEnchantments;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider.EnchantmentTagProvider;
@@ -19,17 +19,17 @@ public class EnchantmentTagGen extends EnchantmentTagProvider {
     @Override
     protected void configure (WrapperLookup arg) {
         getOrCreateTagBuilder(ConventionalEnchantmentTags.WEAPON_DAMAGE_ENHANCEMENTS)
-            .add(ExtraEnchants.BUTCHER.getKey())
-            .add(ExtraEnchants.HERBICIDE.getKey())
-            .add(ExtraEnchants.REBEL.getKey())
-            .add(ExtraEnchants.UNRAVEL.getKey())
-            .add(ExtraEnchants.VOIDRENDER.getKey());
+            .add(EDEEnchantments.BUTCHER.getKey())
+            .add(EDEEnchantments.HERBICIDE.getKey())
+            .add(EDEEnchantments.REBEL.getKey())
+            .add(EDEEnchantments.UNRAVEL.getKey())
+            .add(EDEEnchantments.VOIDRENDER.getKey());
 
         getOrCreateTagBuilder(EnchantmentTags.DAMAGE_EXCLUSIVE_SET)
-            .add(ExtraEnchants.BUTCHER.getKey())
-            .add(ExtraEnchants.HERBICIDE.getKey())
-            .add(ExtraEnchants.REBEL.getKey())
-            .add(ExtraEnchants.UNRAVEL.getKey())
-            .add(ExtraEnchants.VOIDRENDER.getKey());
+            .add(EDEEnchantments.BUTCHER.getKey())
+            .add(EDEEnchantments.HERBICIDE.getKey())
+            .add(EDEEnchantments.REBEL.getKey())
+            .add(EDEEnchantments.UNRAVEL.getKey())
+            .add(EDEEnchantments.VOIDRENDER.getKey());
     }
 }

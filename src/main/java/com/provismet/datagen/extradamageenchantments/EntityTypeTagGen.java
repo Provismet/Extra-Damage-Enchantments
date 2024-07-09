@@ -2,7 +2,7 @@ package com.provismet.datagen.extradamageenchantments;
 
 import java.util.concurrent.CompletableFuture;
 
-import com.provismet.extradamageenchantments.group.ExtraTypeTags;
+import com.provismet.extradamageenchantments.utility.tags.EDEEntityTypeTags;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider.EntityTypeTagProvider;
@@ -17,7 +17,7 @@ public class EntityTypeTagGen extends EntityTypeTagProvider {
 
     @Override
     protected void configure (WrapperLookup arg) {
-        getOrCreateTagBuilder(ExtraTypeTags.ARCANE)
+        getOrCreateTagBuilder(EDEEntityTypeTags.ARCANE)
             .add(EntityType.ALLAY)
             .add(EntityType.BLAZE)
             .add(EntityType.BREEZE)
@@ -27,7 +27,7 @@ public class EntityTypeTagGen extends EntityTypeTagProvider {
             .add(EntityType.SNOW_GOLEM)
             .add(EntityType.VEX);
         
-        getOrCreateTagBuilder(ExtraTypeTags.BEASTLY)
+        getOrCreateTagBuilder(EDEEntityTypeTags.BEASTLY)
                 .add(EntityType.BAT)
                 .add(EntityType.CAMEL)
                 .add(EntityType.CAT)
@@ -55,12 +55,12 @@ public class EntityTypeTagGen extends EntityTypeTagProvider {
                 .add(EntityType.WOLF)
                 .add(EntityType.ARMADILLO);
 
-        getOrCreateTagBuilder(ExtraTypeTags.FUNGIFLORAL)
+        getOrCreateTagBuilder(EDEEntityTypeTags.FUNGIFLORAL)
                 .add(EntityType.CREEPER)
                 .add(EntityType.MOOSHROOM)
                 .add(EntityType.WARDEN);
 
-        getOrCreateTagBuilder(ExtraTypeTags.HUMANOID)
+        getOrCreateTagBuilder(EDEEntityTypeTags.HUMANOID)
                 .add(EntityType.PIGLIN)
                 .add(EntityType.PIGLIN_BRUTE)
                 .add(EntityType.PLAYER)
@@ -68,26 +68,26 @@ public class EntityTypeTagGen extends EntityTypeTagProvider {
                 .add(EntityType.WANDERING_TRADER)
                 .add(EntityType.WITCH);
 
-        getOrCreateTagBuilder(ExtraTypeTags.OUTERWORLDLY)
+        getOrCreateTagBuilder(EDEEntityTypeTags.OUTERWORLDLY)
                 .add(EntityType.ENDERMAN)
                 .add(EntityType.ENDER_DRAGON)
                 .add(EntityType.SHULKER);
 
-        getOrCreateTagBuilder(ExtraTypeTags.SENSITIVE_TO_UNRAVEL)
-                .addOptionalTag(ExtraTypeTags.ARCANE);
+        getOrCreateTagBuilder(EDEEntityTypeTags.SENSITIVE_TO_UNRAVEL)
+                .addOptionalTag(EDEEntityTypeTags.ARCANE);
 
-        getOrCreateTagBuilder(ExtraTypeTags.SENSITIVE_TO_BUTCHER)
-                .addOptionalTag(ExtraTypeTags.BEASTLY);
+        getOrCreateTagBuilder(EDEEntityTypeTags.SENSITIVE_TO_BUTCHER)
+                .addOptionalTag(EDEEntityTypeTags.BEASTLY);
 
-        getOrCreateTagBuilder(ExtraTypeTags.SENSITIVE_TO_HERBICIDE)
-                .addOptionalTag(ExtraTypeTags.FUNGIFLORAL);
+        getOrCreateTagBuilder(EDEEntityTypeTags.SENSITIVE_TO_HERBICIDE)
+                .addOptionalTag(EDEEntityTypeTags.FUNGIFLORAL);
 
-        getOrCreateTagBuilder(ExtraTypeTags.SENSITIVE_TO_REBEL)
-                .addOptionalTag(ExtraTypeTags.HUMANOID)
+        getOrCreateTagBuilder(EDEEntityTypeTags.SENSITIVE_TO_REBEL)
+                .addOptionalTag(EDEEntityTypeTags.HUMANOID)
                 .addOptionalTag(EntityTypeTags.ILLAGER);
 
-        getOrCreateTagBuilder(ExtraTypeTags.SENSITIVE_TO_VOIDRENDER)
-                .addOptionalTag(ExtraTypeTags.OUTERWORLDLY);
+        getOrCreateTagBuilder(EDEEntityTypeTags.SENSITIVE_TO_VOIDRENDER)
+                .addOptionalTag(EDEEntityTypeTags.OUTERWORLDLY);
     }
     
 }

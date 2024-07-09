@@ -1,6 +1,6 @@
 package com.provismet.datagen.extradamageenchantments;
 
-import com.provismet.extradamageenchantments.enchantment.ExtraEnchants;
+import com.provismet.extradamageenchantments.registries.EDEEnchantments;
 
 import com.provismet.lilylib.container.EnchantmentContainer;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -16,11 +16,11 @@ public class LanguageGen extends FabricLanguageProvider {
 
     @Override
     public void generateTranslations (RegistryWrapper.WrapperLookup registryLookup, TranslationBuilder translationBuilder) {
-        LanguageGen.addEnchantment(translationBuilder, ExtraEnchants.BUTCHER, "Butcher", "Increase damage and inflicts slowness against animals and monsters such as Hoglins and Striders.");
-        LanguageGen.addEnchantment(translationBuilder, ExtraEnchants.HERBICIDE, "Herbicide", "Increases damage against floral and fungal mobs such as creepers.");
-        LanguageGen.addEnchantment(translationBuilder, ExtraEnchants.REBEL, "Rebel", "Increases damage against humanoid mobs such as Piglins and Villagers.");
-        LanguageGen.addEnchantment(translationBuilder, ExtraEnchants.UNRAVEL, "Unravel", "Increases damage and inflicts glow against magic-based mobs such as Blazes and Vexes.");
-        LanguageGen.addEnchantment(translationBuilder, ExtraEnchants.VOIDRENDER, "Voidrender", "Increases damage and inflicts glow against void-related mobs such as Endermen and Shulkers.");
+        LanguageGen.addEnchantment(translationBuilder, EDEEnchantments.BUTCHER, "Butcher", "Increase damage and inflicts slowness against animals and monsters such as Hoglins and Striders.");
+        LanguageGen.addEnchantment(translationBuilder, EDEEnchantments.HERBICIDE, "Herbicide", "Increases damage against floral and fungal mobs such as creepers.");
+        LanguageGen.addEnchantment(translationBuilder, EDEEnchantments.REBEL, "Rebel", "Increases damage against humanoid mobs such as Piglins and Villagers.");
+        LanguageGen.addEnchantment(translationBuilder, EDEEnchantments.UNRAVEL, "Unravel", "Increases damage and inflicts glow against magic-based mobs such as Blazes and Vexes.");
+        LanguageGen.addEnchantment(translationBuilder, EDEEnchantments.VOIDRENDER, "Voidrender", "Increases damage and inflicts glow against void-related mobs such as Endermen and Shulkers.");
     }
     
     private static void addEnchantment (TranslationBuilder translationBuilder, EnchantmentContainer enchantment, String name, String description) {

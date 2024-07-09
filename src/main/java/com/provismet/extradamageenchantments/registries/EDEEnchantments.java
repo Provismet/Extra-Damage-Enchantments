@@ -1,10 +1,10 @@
-package com.provismet.extradamageenchantments.enchantment;
+package com.provismet.extradamageenchantments.registries;
 
 import com.provismet.CombatPlusCore.registries.CPCEnchantmentComponentTypes;
 import com.provismet.CombatPlusCore.utility.tag.CPCItemTags;
 import com.provismet.extradamageenchantments.ExtraDEMain;
 
-import com.provismet.extradamageenchantments.group.ExtraTypeTags;
+import com.provismet.extradamageenchantments.utility.tags.EDEEntityTypeTags;
 import com.provismet.lilylib.container.EnchantmentContainer;
 import net.minecraft.component.EnchantmentEffectComponentTypes;
 import net.minecraft.component.type.AttributeModifierSlot;
@@ -27,14 +27,14 @@ import net.minecraft.registry.entry.RegistryEntryList;
 import net.minecraft.registry.tag.EnchantmentTags;
 import net.minecraft.registry.tag.TagKey;
 
-public class ExtraEnchants {
+public class EDEEnchantments {
     public static final EnchantmentContainer REBEL = new EnchantmentContainer(
         ExtraDEMain.identifier("rebel"),
-        (itemLookup, enchantmentLookup, damageLookup, blockLookup) -> createBasicBuilder(itemLookup, enchantmentLookup, ExtraTypeTags.SENSITIVE_TO_REBEL)
+        (itemLookup, enchantmentLookup, damageLookup, blockLookup) -> createBasicBuilder(itemLookup, enchantmentLookup, EDEEntityTypeTags.SENSITIVE_TO_REBEL)
     );
     public static final EnchantmentContainer VOIDRENDER = new EnchantmentContainer(
         ExtraDEMain.identifier("voidrender"),
-        (itemLookup, enchantmentLookup, damageLookup, blockLookup) -> createBasicBuilder(itemLookup, enchantmentLookup, ExtraTypeTags.SENSITIVE_TO_VOIDRENDER)
+        (itemLookup, enchantmentLookup, damageLookup, blockLookup) -> createBasicBuilder(itemLookup, enchantmentLookup, EDEEntityTypeTags.SENSITIVE_TO_VOIDRENDER)
             .addEffect(
                 EnchantmentEffectComponentTypes.POST_ATTACK,
                 EnchantmentEffectTarget.ATTACKER,
@@ -48,13 +48,13 @@ public class ExtraEnchants {
                 ),
                 EntityPropertiesLootCondition.builder(
                     LootContext.EntityTarget.THIS,
-                    EntityPredicate.Builder.create().type(ExtraTypeTags.SENSITIVE_TO_VOIDRENDER)
+                    EntityPredicate.Builder.create().type(EDEEntityTypeTags.SENSITIVE_TO_VOIDRENDER)
                 )
             )
     );
     public static final EnchantmentContainer UNRAVEL = new EnchantmentContainer(
         ExtraDEMain.identifier("unravel"),
-        (itemLookup, enchantmentLookup, damageLookup, blockLookup) -> createBasicBuilder(itemLookup, enchantmentLookup, ExtraTypeTags.SENSITIVE_TO_UNRAVEL)
+        (itemLookup, enchantmentLookup, damageLookup, blockLookup) -> createBasicBuilder(itemLookup, enchantmentLookup, EDEEntityTypeTags.SENSITIVE_TO_UNRAVEL)
             .addEffect(
                 EnchantmentEffectComponentTypes.POST_ATTACK,
                 EnchantmentEffectTarget.ATTACKER,
@@ -68,17 +68,17 @@ public class ExtraEnchants {
                 ),
                 EntityPropertiesLootCondition.builder(
                     LootContext.EntityTarget.THIS,
-                    EntityPredicate.Builder.create().type(ExtraTypeTags.SENSITIVE_TO_UNRAVEL)
+                    EntityPredicate.Builder.create().type(EDEEntityTypeTags.SENSITIVE_TO_UNRAVEL)
                 )
             )
     );
     public static final EnchantmentContainer HERBICIDE = new EnchantmentContainer(
         ExtraDEMain.identifier("herbicide"),
-        (itemLookup, enchantmentLookup, damageLookup, blockLookup) -> createBasicBuilder(itemLookup, enchantmentLookup, ExtraTypeTags.SENSITIVE_TO_HERBICIDE)
+        (itemLookup, enchantmentLookup, damageLookup, blockLookup) -> createBasicBuilder(itemLookup, enchantmentLookup, EDEEntityTypeTags.SENSITIVE_TO_HERBICIDE)
     );
     public static final EnchantmentContainer BUTCHER = new EnchantmentContainer(
         ExtraDEMain.identifier("butcher"),
-        (itemLookup, enchantmentLookup, damageLookup, blockLookup) -> createBasicBuilder(itemLookup, enchantmentLookup, ExtraTypeTags.SENSITIVE_TO_BUTCHER)
+        (itemLookup, enchantmentLookup, damageLookup, blockLookup) -> createBasicBuilder(itemLookup, enchantmentLookup, EDEEntityTypeTags.SENSITIVE_TO_BUTCHER)
             .addEffect(
                 EnchantmentEffectComponentTypes.POST_ATTACK,
                 EnchantmentEffectTarget.ATTACKER,
@@ -92,7 +92,7 @@ public class ExtraEnchants {
                 ),
                 EntityPropertiesLootCondition.builder(
                     LootContext.EntityTarget.THIS,
-                    EntityPredicate.Builder.create().type(ExtraTypeTags.SENSITIVE_TO_BUTCHER)
+                    EntityPredicate.Builder.create().type(EDEEntityTypeTags.SENSITIVE_TO_BUTCHER)
                 )
             )
     );
