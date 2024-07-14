@@ -31,5 +31,40 @@ public class EnchantmentTagGen extends EnchantmentTagProvider {
             .add(EDEEnchantments.REBEL.getKey())
             .add(EDEEnchantments.UNRAVEL.getKey())
             .add(EDEEnchantments.VOIDRENDER.getKey());
+
+        getOrCreateTagBuilder(EnchantmentTags.NON_TREASURE)
+            .add(EDEEnchantments.BUTCHER.getKey())
+            .add(EDEEnchantments.HERBICIDE.getKey())
+            .add(EDEEnchantments.REBEL.getKey())
+            .add(EDEEnchantments.UNRAVEL.getKey())
+            .add(EDEEnchantments.VOIDRENDER.getKey());
+
+        getOrCreateTagBuilder(EnchantmentTags.IN_ENCHANTING_TABLE)
+            .add(EDEEnchantments.BUTCHER.getKey())
+            .add(EDEEnchantments.HERBICIDE.getKey())
+            .add(EDEEnchantments.REBEL.getKey())
+            .add(EDEEnchantments.UNRAVEL.getKey())
+            .add(EDEEnchantments.VOIDRENDER.getKey());
+
+        getOrCreateTagBuilder(EnchantmentTags.TRADEABLE)
+            .add(EDEEnchantments.BUTCHER.getKey())
+            .add(EDEEnchantments.HERBICIDE.getKey())
+            .add(EDEEnchantments.REBEL.getKey())
+            .add(EDEEnchantments.UNRAVEL.getKey())
+            .add(EDEEnchantments.VOIDRENDER.getKey());
+
+        getOrCreateTagBuilder(EnchantmentTags.ON_RANDOM_LOOT)
+            .add(EDEEnchantments.BUTCHER.getKey())
+            .add(EDEEnchantments.HERBICIDE.getKey())
+            .add(EDEEnchantments.REBEL.getKey())
+            .add(EDEEnchantments.UNRAVEL.getKey())
+            .add(EDEEnchantments.VOIDRENDER.getKey());
+
+        getOrCreateTagBuilder(EnchantmentTags.ON_TRADED_EQUIPMENT)
+            .add(EDEEnchantments.BUTCHER.getKey())
+            .add(EDEEnchantments.HERBICIDE.getKey())
+            .add(EDEEnchantments.REBEL.getKey())
+            .add(EDEEnchantments.UNRAVEL.getKey())
+            .add(EDEEnchantments.VOIDRENDER.getKey());
     }
 }
