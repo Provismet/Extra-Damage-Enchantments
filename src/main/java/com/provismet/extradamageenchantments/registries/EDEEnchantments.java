@@ -97,10 +97,6 @@ public class EDEEnchantments {
             )
     );
 
-    private static RegistryKey<Enchantment> of (String name) {
-        return RegistryKey.of(RegistryKeys.ENCHANTMENT, ExtraDEMain.identifier(name));
-    }
-
     public static void bootstrap (Registerable<Enchantment> registerable) {
         register(registerable, REBEL);
         register(registerable, VOIDRENDER);
