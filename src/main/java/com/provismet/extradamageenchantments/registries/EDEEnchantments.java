@@ -21,8 +21,6 @@ import net.minecraft.loot.context.LootContext;
 import net.minecraft.predicate.entity.EntityPredicate;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryEntryLookup;
-import net.minecraft.registry.RegistryKey;
-import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.entry.RegistryEntryList;
 import net.minecraft.registry.tag.EnchantmentTags;
 import net.minecraft.registry.tag.TagKey;
