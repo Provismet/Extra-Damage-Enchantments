@@ -28,66 +28,66 @@ public class EntityTypeTagGen extends EntityTypeTagProvider {
             .add(EntityType.VEX);
         
         getOrCreateTagBuilder(EDEEntityTypeTags.BEASTLY)
-                .add(EntityType.BAT)
-                .add(EntityType.CAMEL)
-                .add(EntityType.CAT)
-                .add(EntityType.CHICKEN)
-                .add(EntityType.COW)
-                .add(EntityType.DONKEY)
-                .add(EntityType.FOX)
-                .add(EntityType.GHAST)
-                .add(EntityType.GOAT)
-                .add(EntityType.HOGLIN)
-                .add(EntityType.HORSE)
-                .add(EntityType.LLAMA)
-                .add(EntityType.MULE)
-                .add(EntityType.OCELOT)
-                .add(EntityType.PANDA)
-                .add(EntityType.PARROT)
-                .add(EntityType.PIG)
-                .add(EntityType.POLAR_BEAR)
-                .add(EntityType.RABBIT)
-                .add(EntityType.RAVAGER)
-                .add(EntityType.SHEEP)
-                .add(EntityType.SNIFFER)
-                .add(EntityType.STRIDER)
-                .add(EntityType.TRADER_LLAMA)
-                .add(EntityType.WOLF)
-                .add(EntityType.ARMADILLO);
+            .add(EntityType.BAT)
+            .add(EntityType.CAMEL)
+            .add(EntityType.CAT)
+            .add(EntityType.CHICKEN)
+            .add(EntityType.COW)
+            .add(EntityType.DONKEY)
+            .add(EntityType.FOX)
+            .add(EntityType.GHAST)
+            .add(EntityType.GOAT)
+            .add(EntityType.HOGLIN)
+            .add(EntityType.HORSE)
+            .add(EntityType.LLAMA)
+            .add(EntityType.MULE)
+            .add(EntityType.OCELOT)
+            .add(EntityType.PANDA)
+            .add(EntityType.PARROT)
+            .add(EntityType.PIG)
+            .add(EntityType.POLAR_BEAR)
+            .add(EntityType.RABBIT)
+            .add(EntityType.RAVAGER)
+            .add(EntityType.SHEEP)
+            .add(EntityType.SNIFFER)
+            .add(EntityType.STRIDER)
+            .add(EntityType.TRADER_LLAMA)
+            .add(EntityType.WOLF)
+            .add(EntityType.ARMADILLO);
 
         getOrCreateTagBuilder(EDEEntityTypeTags.FUNGIFLORAL)
-                .add(EntityType.CREEPER)
-                .add(EntityType.MOOSHROOM)
-                .add(EntityType.WARDEN);
+            .add(EntityType.CREEPER)
+            .add(EntityType.MOOSHROOM)
+            .add(EntityType.WARDEN);
 
         getOrCreateTagBuilder(EDEEntityTypeTags.HUMANOID)
-                .add(EntityType.PIGLIN)
-                .add(EntityType.PIGLIN_BRUTE)
-                .add(EntityType.PLAYER)
-                .add(EntityType.VILLAGER)
-                .add(EntityType.WANDERING_TRADER)
-                .add(EntityType.WITCH);
+            .add(EntityType.PIGLIN)
+            .add(EntityType.PIGLIN_BRUTE)
+            .add(EntityType.PLAYER)
+            .add(EntityType.VILLAGER)
+            .add(EntityType.WANDERING_TRADER)
+            .add(EntityType.WITCH);
 
         getOrCreateTagBuilder(EDEEntityTypeTags.OUTERWORLDLY)
-                .add(EntityType.ENDERMAN)
-                .add(EntityType.ENDER_DRAGON)
-                .add(EntityType.SHULKER);
+            .add(EntityType.ENDERMAN)
+            .add(EntityType.ENDER_DRAGON)
+            .add(EntityType.SHULKER);
 
         getOrCreateTagBuilder(EDEEntityTypeTags.SENSITIVE_TO_UNRAVEL)
-                .addOptionalTag(EDEEntityTypeTags.ARCANE);
+            .addOptionalTag(EDEEntityTypeTags.ARCANE);
 
         getOrCreateTagBuilder(EDEEntityTypeTags.SENSITIVE_TO_BUTCHER)
-                .addOptionalTag(EDEEntityTypeTags.BEASTLY);
+            .addOptionalTag(EDEEntityTypeTags.BEASTLY);
 
         getOrCreateTagBuilder(EDEEntityTypeTags.SENSITIVE_TO_HERBICIDE)
-                .addOptionalTag(EDEEntityTypeTags.FUNGIFLORAL);
+            .addOptionalTag(EDEEntityTypeTags.FUNGIFLORAL);
 
         getOrCreateTagBuilder(EDEEntityTypeTags.SENSITIVE_TO_REBEL)
-                .addOptionalTag(EDEEntityTypeTags.HUMANOID)
-                .addOptionalTag(EntityTypeTags.ILLAGER);
+            .addOptionalTag(EDEEntityTypeTags.HUMANOID)
+            .addOptionalTag(EntityTypeTags.ILLAGER);
 
         getOrCreateTagBuilder(EDEEntityTypeTags.SENSITIVE_TO_VOIDRENDER)
-                .addOptionalTag(EDEEntityTypeTags.OUTERWORLDLY);
+            .addOptionalTag(EDEEntityTypeTags.OUTERWORLDLY);
     }
     
 }
