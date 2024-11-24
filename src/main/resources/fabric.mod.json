@@ -30,13 +30,12 @@
     ]
   },
   "mixins": [
-    "extrade.mixins.json"
   ],
 
   "depends": {
     "fabricloader": ">=0.15.0",
     "fabric-api": "*",
-    "minecraft": "~1.21",
+    "minecraft": "~1.21.2",
     "java": ">=21",
     "combat-plus": "*"
   },

@@ -1,7 +1,10 @@
 package com.provismet.datagen.extradamageenchantments;
 
+import com.provismet.extradamageenchantments.registries.EDEEnchantments;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
+import net.minecraft.registry.RegistryBuilder;
+import net.minecraft.registry.RegistryKeys;
 
 public class ExtraDEDatagen implements DataGeneratorEntrypoint {
     @Override
@@ -11,5 +14,10 @@ public class ExtraDEDatagen implements DataGeneratorEntrypoint {
         pack.addProvider(EntityTypeTagGen::new);
         pack.addProvider(EnchantmentTagGen::new);
         pack.addProvider(LanguageGen::new);
+    }
+
+    @Override
+    public void buildRegistry (RegistryBuilder registryBuilder) {
+        registryBuilder.addRegistry(RegistryKeys.ENCHANTMENT, EDEEnchantments::bootstrap);
     }
 }
