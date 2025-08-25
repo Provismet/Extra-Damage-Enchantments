@@ -1,0 +1,17 @@
+{
+  "enchantment.extra-damage-enchantments.butcher": "Мясник",
+  "enchantment.extra-damage-enchantments.butcher.desc": "Увеличивает урон по мобам из Незера и замедляет их (например, хоглины и лавомерки).",
+  "enchantment.extra-damage-enchantments.butcher.description": "Увеличивает урон по мобам из Незера и замедляет их (например, хоглины и лавомерки).",
+  "enchantment.extra-damage-enchantments.herbicide": "Гербицид",
+  "enchantment.extra-damage-enchantments.herbicide.desc": "Увеличивает урон по цветочным и грибковым мобам (например, криперы).",
+  "enchantment.extra-damage-enchantments.herbicide.description": "Увеличивает урон по цветочным и грибковым мобам (например, криперы).",
+  "enchantment.extra-damage-enchantments.rebel": "Бунтарь",
+  "enchantment.extra-damage-enchantments.rebel.desc": "Увеличивает урон по человекоподобным мобам (например, пиглины и деревенские жители).",
+  "enchantment.extra-damage-enchantments.rebel.description": "Увеличивает урон по человекоподобным мобам (например, пиглины и деревенские жители).",
+  "enchantment.extra-damage-enchantments.unravel": "Распутывание",
+  "enchantment.extra-damage-enchantments.unravel.desc": "Увеличивает урон по мобам, связанным с магией, и подсвечивает их (например, ифриты и вредины).",
+  "enchantment.extra-damage-enchantments.unravel.description": "Увеличивает урон по мобам, связанным с магией, и подсвечивает их (например, ифриты и вредины).",
+  "enchantment.extra-damage-enchantments.voidrender": "Хранитель пустоты",
+  "enchantment.extra-damage-enchantments.voidrender.desc": "Увеличивает урон по мобам, связанным с Эндером, и подсвечивает их (например, эндермены и шалкеры).",
+  "enchantment.extra-damage-enchantments.voidrender.description": "Увеличивает урон по мобам, связанным с Эндером, и подсвечивает их (например, эндермены и шалкеры)."
+}
