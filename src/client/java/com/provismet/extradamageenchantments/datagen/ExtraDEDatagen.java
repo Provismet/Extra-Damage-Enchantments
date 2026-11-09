@@ -1,4 +1,4 @@
-package com.provismet.datagen.extradamageenchantments;
+package com.provismet.extradamageenchantments.datagen;
 
 import com.provismet.extradamageenchantments.registries.EDEEnchantments;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;

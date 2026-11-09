@@ -18,6 +18,16 @@ repositories {
 	maven { url "https://jitpack.io" }
 }
 
+loom {
+	splitEnvironmentSourceSets()
+	mods {
+		"extra-damage-enchantments" {
+			sourceSet sourceSets.main
+			sourceSet sourceSets.client
+		}
+	}
+}
+
 fabricApi {
 	configureDataGeneration {
 		client = true

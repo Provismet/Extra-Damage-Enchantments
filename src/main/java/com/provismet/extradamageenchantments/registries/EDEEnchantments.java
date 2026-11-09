@@ -2,7 +2,7 @@ package com.provismet.extradamageenchantments.registries;
 
 import com.provismet.combatplus.api.tag.CombatPlusItemTags;
 import com.provismet.combatplus.registries.CombatPlusEnchantmentComponentTypes;
-import com.provismet.extradamageenchantments.ExtraDEMain;
+import com.provismet.extradamageenchantments.ExtraDamageEnchantmentsMain;
 import com.provismet.extradamageenchantments.utility.tags.EDEEntityTypeTags;
 import com.provismet.lilylib.container.EnchantmentContainer;
 import net.minecraft.advancements.criterion.EntityPredicate;
@@ -27,11 +27,11 @@ import net.minecraft.world.level.storage.loot.predicates.LootItemEntityPropertyC
 
 public class EDEEnchantments {
     public static final EnchantmentContainer REBEL = new EnchantmentContainer(
-        ExtraDEMain.identifier("rebel"),
+        ExtraDamageEnchantmentsMain.identifier("rebel"),
         (itemLookup, enchantmentLookup, damageLookup, blockLookup, entityLookup) -> createBasicBuilder(itemLookup, enchantmentLookup, entityLookup, EDEEntityTypeTags.SENSITIVE_TO_REBEL)
     );
     public static final EnchantmentContainer VOIDRENDER = new EnchantmentContainer(
-        ExtraDEMain.identifier("voidrender"),
+        ExtraDamageEnchantmentsMain.identifier("voidrender"),
         (itemLookup, enchantmentLookup, damageLookup, blockLookup, entityLookup) -> createBasicBuilder(itemLookup, enchantmentLookup, entityLookup, EDEEntityTypeTags.SENSITIVE_TO_VOIDRENDER)
             .withEffect(
                 EnchantmentEffectComponents.POST_ATTACK,
@@ -51,7 +51,7 @@ public class EDEEnchantments {
             )
     );
     public static final EnchantmentContainer UNRAVEL = new EnchantmentContainer(
-        ExtraDEMain.identifier("unravel"),
+        ExtraDamageEnchantmentsMain.identifier("unravel"),
         (itemLookup, enchantmentLookup, damageLookup, blockLookup, entityLookup) -> createBasicBuilder(itemLookup, enchantmentLookup, entityLookup, EDEEntityTypeTags.SENSITIVE_TO_UNRAVEL)
             .withEffect(
                 EnchantmentEffectComponents.POST_ATTACK,
@@ -71,11 +71,11 @@ public class EDEEnchantments {
             )
     );
     public static final EnchantmentContainer HERBICIDE = new EnchantmentContainer(
-        ExtraDEMain.identifier("herbicide"),
+        ExtraDamageEnchantmentsMain.identifier("herbicide"),
         (itemLookup, enchantmentLookup, damageLookup, blockLookup, entityLookup) -> createBasicBuilder(itemLookup, enchantmentLookup, entityLookup, EDEEntityTypeTags.SENSITIVE_TO_HERBICIDE)
     );
     public static final EnchantmentContainer BUTCHER = new EnchantmentContainer(
-        ExtraDEMain.identifier("butcher"),
+        ExtraDamageEnchantmentsMain.identifier("butcher"),
         (itemLookup, enchantmentLookup, damageLookup, blockLookup, entityLookup) -> createBasicBuilder(itemLookup, enchantmentLookup, entityLookup, EDEEntityTypeTags.SENSITIVE_TO_BUTCHER)
             .withEffect(
                 EnchantmentEffectComponents.POST_ATTACK,

@@ -20,10 +20,13 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.provismet.extradamageenchantments.ExtraDEMain"
+      "com.provismet.extradamageenchantments.ExtraDamageEnchantmentsMain"
+    ],
+    "client": [
+      "com.provismet.extradamageenchantments.ExtraDamageEnchantmentsClient"
     ],
     "fabric-datagen": [
-      "com.provismet.datagen.extradamageenchantments.ExtraDEDatagen"
+      "com.provismet.extradamageenchantments.datagen.ExtraDEDatagen"
     ],
     "provihealth": [
       "com.provismet.extradamageenchantments.compat.HealthEntrypoint"
