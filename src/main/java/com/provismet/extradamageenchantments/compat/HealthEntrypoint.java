@@ -3,8 +3,7 @@ package com.provismet.extradamageenchantments.compat;
 import com.provismet.extradamageenchantments.ExtraDEMain;
 import com.provismet.extradamageenchantments.utility.tags.EDEEntityTypeTags;
 import com.provismet.provihealth.api.ProviHealthApi;
-
-import net.minecraft.item.Items;
+import net.minecraft.world.item.Items;
 
 public class HealthEntrypoint implements ProviHealthApi {
     private static final int DEFAULT_PRIORITY = -990;

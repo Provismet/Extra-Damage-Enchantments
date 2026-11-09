@@ -1,33 +1,33 @@
 package com.provismet.datagen.extradamageenchantments;
 
+import com.provismet.extradamageenchantments.utility.tags.EDEEntityTypeTags;
+import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
+import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider;
+import net.minecraft.core.HolderLookup.Provider;
+import net.minecraft.tags.EntityTypeTags;
+import net.minecraft.world.entity.EntityType;
+
 import java.util.concurrent.CompletableFuture;
 
-import com.provismet.extradamageenchantments.utility.tags.EDEEntityTypeTags;
-
-import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
-import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider.EntityTypeTagProvider;
-import net.minecraft.entity.EntityType;
-import net.minecraft.registry.RegistryWrapper.WrapperLookup;
-import net.minecraft.registry.tag.EntityTypeTags;
-
-public class EntityTypeTagGen extends EntityTypeTagProvider {
-    public EntityTypeTagGen (FabricDataOutput output, CompletableFuture<WrapperLookup> completableFuture) {
+public class EntityTypeTagGen extends FabricTagsProvider.EntityTypeTagsProvider {
+    public EntityTypeTagGen (FabricPackOutput output, CompletableFuture<Provider> completableFuture) {
         super(output, completableFuture);
     }
 
     @Override
-    protected void configure (WrapperLookup arg) {
-        getOrCreateTagBuilder(EDEEntityTypeTags.ARCANE)
+    protected void addTags (Provider arg) {
+        this.valueLookupBuilder(EDEEntityTypeTags.ARCANE)
             .add(EntityType.ALLAY)
             .add(EntityType.BLAZE)
             .add(EntityType.BREEZE)
+            .add(EntityType.COPPER_GOLEM)
             .add(EntityType.IRON_GOLEM)
             .add(EntityType.MAGMA_CUBE)
             .add(EntityType.SLIME)
             .add(EntityType.SNOW_GOLEM)
             .add(EntityType.VEX);
         
-        getOrCreateTagBuilder(EDEEntityTypeTags.BEASTLY)
+        this.valueLookupBuilder(EDEEntityTypeTags.BEASTLY)
             .add(EntityType.BAT)
             .add(EntityType.CAMEL)
             .add(EntityType.CAT)
@@ -55,12 +55,12 @@ public class EntityTypeTagGen extends EntityTypeTagProvider {
             .add(EntityType.WOLF)
             .add(EntityType.ARMADILLO);
 
-        getOrCreateTagBuilder(EDEEntityTypeTags.FUNGIFLORAL)
+        this.valueLookupBuilder(EDEEntityTypeTags.FUNGIFLORAL)
             .add(EntityType.CREEPER)
             .add(EntityType.MOOSHROOM)
             .add(EntityType.WARDEN);
 
-        getOrCreateTagBuilder(EDEEntityTypeTags.HUMANOID)
+        this.valueLookupBuilder(EDEEntityTypeTags.HUMANOID)
             .add(EntityType.PIGLIN)
             .add(EntityType.PIGLIN_BRUTE)
             .add(EntityType.PLAYER)
@@ -68,25 +68,25 @@ public class EntityTypeTagGen extends EntityTypeTagProvider {
             .add(EntityType.WANDERING_TRADER)
             .add(EntityType.WITCH);
 
-        getOrCreateTagBuilder(EDEEntityTypeTags.OUTERWORLDLY)
+        this.valueLookupBuilder(EDEEntityTypeTags.OUTERWORLDLY)
             .add(EntityType.ENDERMAN)
             .add(EntityType.ENDER_DRAGON)
             .add(EntityType.SHULKER);
 
-        getOrCreateTagBuilder(EDEEntityTypeTags.SENSITIVE_TO_UNRAVEL)
+        this.valueLookupBuilder(EDEEntityTypeTags.SENSITIVE_TO_UNRAVEL)
             .addOptionalTag(EDEEntityTypeTags.ARCANE);
 
-        getOrCreateTagBuilder(EDEEntityTypeTags.SENSITIVE_TO_BUTCHER)
+        this.valueLookupBuilder(EDEEntityTypeTags.SENSITIVE_TO_BUTCHER)
             .addOptionalTag(EDEEntityTypeTags.BEASTLY);
 
-        getOrCreateTagBuilder(EDEEntityTypeTags.SENSITIVE_TO_HERBICIDE)
+        this.valueLookupBuilder(EDEEntityTypeTags.SENSITIVE_TO_HERBICIDE)
             .addOptionalTag(EDEEntityTypeTags.FUNGIFLORAL);
 
-        getOrCreateTagBuilder(EDEEntityTypeTags.SENSITIVE_TO_REBEL)
+        this.valueLookupBuilder(EDEEntityTypeTags.SENSITIVE_TO_REBEL)
             .addOptionalTag(EDEEntityTypeTags.HUMANOID)
             .addOptionalTag(EntityTypeTags.ILLAGER);
 
-        getOrCreateTagBuilder(EDEEntityTypeTags.SENSITIVE_TO_VOIDRENDER)
+        this.valueLookupBuilder(EDEEntityTypeTags.SENSITIVE_TO_VOIDRENDER)
             .addOptionalTag(EDEEntityTypeTags.OUTERWORLDLY);
     }
     

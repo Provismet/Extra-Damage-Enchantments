@@ -1,10 +1,9 @@
 package com.provismet.extradamageenchantments.utility.tags;
 
 import com.provismet.extradamageenchantments.ExtraDEMain;
-
-import net.minecraft.entity.EntityType;
-import net.minecraft.registry.RegistryKeys;
-import net.minecraft.registry.tag.TagKey;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.entity.EntityType;
 
 public class EDEEntityTypeTags {
     public static final TagKey<EntityType<?>> HUMANOID = EDEEntityTypeTags.of("humanoid");
@@ -20,6 +19,6 @@ public class EDEEntityTypeTags {
     public static final TagKey<EntityType<?>> SENSITIVE_TO_BUTCHER = EDEEntityTypeTags.of("sensitive_to_butcher");
 
     private static TagKey<EntityType<?>> of (String path) {
-        return TagKey.of(RegistryKeys.ENTITY_TYPE, ExtraDEMain.identifier(path));
+        return TagKey.create(Registries.ENTITY_TYPE, ExtraDEMain.identifier(path));
     }
 }

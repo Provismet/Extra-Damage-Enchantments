@@ -35,16 +35,14 @@
   "depends": {
     "fabricloader": ">=0.15.0",
     "fabric-api": "*",
-    "minecraft": "~1.21.2",
-    "java": ">=21",
+    "minecraft": ">=26.1",
+    "java": ">=25",
     "combat-plus": "*"
   },
   "recommends": {
     "provihealth": "*"
   },
   "suggests": {
-    "origins": "*",
-    "extrade_oa": "*",
     "enchantedtooltips": "*",
     "enchdesc": "*"
   },

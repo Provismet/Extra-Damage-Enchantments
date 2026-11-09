@@ -1,8 +1,7 @@
 package com.provismet.extradamageenchantments;
 
 import net.fabricmc.api.ModInitializer;
-import net.minecraft.util.Identifier;
-
+import net.minecraft.resources.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -11,7 +10,7 @@ public class ExtraDEMain implements ModInitializer {
 	public static final Logger LOGGER = LoggerFactory.getLogger(MODID);
 
 	public static Identifier identifier (String path) {
-		return Identifier.of(MODID, path);
+		return Identifier.fromNamespaceAndPath(MODID, path);
 	}
 
 	@Override

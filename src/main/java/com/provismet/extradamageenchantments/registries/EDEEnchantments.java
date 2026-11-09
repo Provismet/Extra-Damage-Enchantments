@@ -1,30 +1,29 @@
 package com.provismet.extradamageenchantments.registries;
 
-import com.provismet.CombatPlusCore.registries.CPCEnchantmentComponentTypes;
-import com.provismet.CombatPlusCore.utility.tag.CPCItemTags;
+import com.provismet.combatplus.api.tag.CombatPlusItemTags;
+import com.provismet.combatplus.registries.CombatPlusEnchantmentComponentTypes;
 import com.provismet.extradamageenchantments.ExtraDEMain;
-
 import com.provismet.extradamageenchantments.utility.tags.EDEEntityTypeTags;
 import com.provismet.lilylib.container.EnchantmentContainer;
-import net.minecraft.component.EnchantmentEffectComponentTypes;
-import net.minecraft.component.type.AttributeModifierSlot;
-import net.minecraft.enchantment.Enchantment;
-import net.minecraft.enchantment.EnchantmentLevelBasedValue;
-import net.minecraft.enchantment.effect.EnchantmentEffectTarget;
-import net.minecraft.enchantment.effect.entity.ApplyMobEffectEnchantmentEffect;
-import net.minecraft.enchantment.effect.value.AddEnchantmentEffect;
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.item.Item;
-import net.minecraft.loot.condition.EntityPropertiesLootCondition;
-import net.minecraft.loot.context.LootContext;
-import net.minecraft.predicate.entity.EntityPredicate;
-import net.minecraft.predicate.entity.EntityTypePredicate;
-import net.minecraft.registry.Registerable;
-import net.minecraft.registry.RegistryEntryLookup;
-import net.minecraft.registry.entry.RegistryEntryList;
-import net.minecraft.registry.tag.EnchantmentTags;
-import net.minecraft.registry.tag.TagKey;
+import net.minecraft.advancements.criterion.EntityPredicate;
+import net.minecraft.advancements.criterion.EntityTypePredicate;
+import net.minecraft.core.HolderGetter;
+import net.minecraft.core.HolderSet;
+import net.minecraft.data.worldgen.BootstrapContext;
+import net.minecraft.tags.EnchantmentTags;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.EquipmentSlotGroup;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.enchantment.Enchantment;
+import net.minecraft.world.item.enchantment.EnchantmentEffectComponents;
+import net.minecraft.world.item.enchantment.EnchantmentTarget;
+import net.minecraft.world.item.enchantment.LevelBasedValue;
+import net.minecraft.world.item.enchantment.effects.AddValue;
+import net.minecraft.world.item.enchantment.effects.ApplyMobEffect;
+import net.minecraft.world.level.storage.loot.LootContext;
+import net.minecraft.world.level.storage.loot.predicates.LootItemEntityPropertyCondition;
 
 public class EDEEnchantments {
     public static final EnchantmentContainer REBEL = new EnchantmentContainer(
@@ -34,40 +33,40 @@ public class EDEEnchantments {
     public static final EnchantmentContainer VOIDRENDER = new EnchantmentContainer(
         ExtraDEMain.identifier("voidrender"),
         (itemLookup, enchantmentLookup, damageLookup, blockLookup, entityLookup) -> createBasicBuilder(itemLookup, enchantmentLookup, entityLookup, EDEEntityTypeTags.SENSITIVE_TO_VOIDRENDER)
-            .addEffect(
-                EnchantmentEffectComponentTypes.POST_ATTACK,
-                EnchantmentEffectTarget.ATTACKER,
-                EnchantmentEffectTarget.VICTIM,
-                new ApplyMobEffectEnchantmentEffect(
-                    RegistryEntryList.of(StatusEffects.GLOWING),
-                    EnchantmentLevelBasedValue.linear(1),
-                    EnchantmentLevelBasedValue.linear(1, 0.5f),
-                    EnchantmentLevelBasedValue.constant(0),
-                    EnchantmentLevelBasedValue.constant(0)
+            .withEffect(
+                EnchantmentEffectComponents.POST_ATTACK,
+                EnchantmentTarget.ATTACKER,
+                EnchantmentTarget.VICTIM,
+                new ApplyMobEffect(
+                    HolderSet.direct(MobEffects.GLOWING),
+                    LevelBasedValue.perLevel(1),
+                    LevelBasedValue.perLevel(1, 0.5f),
+                    LevelBasedValue.constant(0),
+                    LevelBasedValue.constant(0)
                 ),
-                EntityPropertiesLootCondition.builder(
+                LootItemEntityPropertyCondition.hasProperties(
                     LootContext.EntityTarget.THIS,
-                    EntityPredicate.Builder.create().type(EntityTypePredicate.create(entityLookup, EDEEntityTypeTags.SENSITIVE_TO_VOIDRENDER))
+                    EntityPredicate.Builder.entity().entityType(EntityTypePredicate.of(entityLookup, EDEEntityTypeTags.SENSITIVE_TO_VOIDRENDER))
                 )
             )
     );
     public static final EnchantmentContainer UNRAVEL = new EnchantmentContainer(
         ExtraDEMain.identifier("unravel"),
         (itemLookup, enchantmentLookup, damageLookup, blockLookup, entityLookup) -> createBasicBuilder(itemLookup, enchantmentLookup, entityLookup, EDEEntityTypeTags.SENSITIVE_TO_UNRAVEL)
-            .addEffect(
-                EnchantmentEffectComponentTypes.POST_ATTACK,
-                EnchantmentEffectTarget.ATTACKER,
-                EnchantmentEffectTarget.VICTIM,
-                new ApplyMobEffectEnchantmentEffect(
-                    RegistryEntryList.of(StatusEffects.GLOWING),
-                    EnchantmentLevelBasedValue.linear(1),
-                    EnchantmentLevelBasedValue.linear(1, 0.5f),
-                    EnchantmentLevelBasedValue.constant(0),
-                    EnchantmentLevelBasedValue.constant(0)
+            .withEffect(
+                EnchantmentEffectComponents.POST_ATTACK,
+                EnchantmentTarget.ATTACKER,
+                EnchantmentTarget.VICTIM,
+                new ApplyMobEffect(
+                    HolderSet.direct(MobEffects.GLOWING),
+                    LevelBasedValue.perLevel(1),
+                    LevelBasedValue.perLevel(1, 0.5f),
+                    LevelBasedValue.constant(0),
+                    LevelBasedValue.constant(0)
                 ),
-                EntityPropertiesLootCondition.builder(
+                LootItemEntityPropertyCondition.hasProperties(
                     LootContext.EntityTarget.THIS,
-                    EntityPredicate.Builder.create().type(EntityTypePredicate.create(entityLookup, EDEEntityTypeTags.SENSITIVE_TO_UNRAVEL))
+                    EntityPredicate.Builder.entity().entityType(EntityTypePredicate.of(entityLookup, EDEEntityTypeTags.SENSITIVE_TO_UNRAVEL))
                 )
             )
     );
@@ -78,25 +77,25 @@ public class EDEEnchantments {
     public static final EnchantmentContainer BUTCHER = new EnchantmentContainer(
         ExtraDEMain.identifier("butcher"),
         (itemLookup, enchantmentLookup, damageLookup, blockLookup, entityLookup) -> createBasicBuilder(itemLookup, enchantmentLookup, entityLookup, EDEEntityTypeTags.SENSITIVE_TO_BUTCHER)
-            .addEffect(
-                EnchantmentEffectComponentTypes.POST_ATTACK,
-                EnchantmentEffectTarget.ATTACKER,
-                EnchantmentEffectTarget.VICTIM,
-                new ApplyMobEffectEnchantmentEffect(
-                    RegistryEntryList.of(StatusEffects.SLOWNESS),
-                    EnchantmentLevelBasedValue.linear(1.5f),
-                    EnchantmentLevelBasedValue.linear(1.5f, 0.5f),
-                    EnchantmentLevelBasedValue.constant(2),
-                    EnchantmentLevelBasedValue.constant(2)
+            .withEffect(
+                EnchantmentEffectComponents.POST_ATTACK,
+                EnchantmentTarget.ATTACKER,
+                EnchantmentTarget.VICTIM,
+                new ApplyMobEffect(
+                    HolderSet.direct(MobEffects.SLOWNESS),
+                    LevelBasedValue.perLevel(1.5f),
+                    LevelBasedValue.perLevel(1.5f, 0.5f),
+                    LevelBasedValue.constant(2),
+                    LevelBasedValue.constant(2)
                 ),
-                EntityPropertiesLootCondition.builder(
+                LootItemEntityPropertyCondition.hasProperties(
                     LootContext.EntityTarget.THIS,
-                    EntityPredicate.Builder.create().type(EntityTypePredicate.create(entityLookup, EDEEntityTypeTags.SENSITIVE_TO_BUTCHER))
+                    EntityPredicate.Builder.entity().entityType(EntityTypePredicate.of(entityLookup, EDEEntityTypeTags.SENSITIVE_TO_BUTCHER))
                 )
             )
     );
 
-    public static void bootstrap (Registerable<Enchantment> registerable) {
+    public static void bootstrap (BootstrapContext<Enchantment> registerable) {
         register(registerable, REBEL);
         register(registerable, VOIDRENDER);
         register(registerable, UNRAVEL);
@@ -104,30 +103,30 @@ public class EDEEnchantments {
         register(registerable, BUTCHER);
     }
 
-    private static void register (Registerable<Enchantment> registerable, EnchantmentContainer container) {
-        registerable.register(container.getKey(), container.getBuilder(registerable).build(container.getKey().getValue()));
+    private static void register (BootstrapContext<Enchantment> registerable, EnchantmentContainer container) {
+        registerable.register(container.getKey(), container.getBuilder(registerable).build(container.getKey().identifier()));
     }
 
-    private static Enchantment.Builder createBasicBuilder (RegistryEntryLookup<Item> itemLookup, RegistryEntryLookup<Enchantment> enchantmentLookup, RegistryEntryLookup<EntityType<?>> entityLookup, TagKey<EntityType<?>> tag) {
-        return Enchantment.builder(
+    private static Enchantment.Builder createBasicBuilder (HolderGetter<Item> itemLookup, HolderGetter<Enchantment> enchantmentLookup, HolderGetter<EntityType<?>> entityLookup, TagKey<EntityType<?>> tag) {
+        return Enchantment.enchantment(
             Enchantment.definition(
-                itemLookup.getOrThrow(CPCItemTags.DAMAGE_ENCHANTABLE),
-                itemLookup.getOrThrow(CPCItemTags.DAMAGE_PRIMARY_ENCHANTABLE),
+                itemLookup.getOrThrow(CombatPlusItemTags.DAMAGE_ENCHANTABLE),
+                itemLookup.getOrThrow(CombatPlusItemTags.DAMAGE_PRIMARY_ENCHANTABLE),
                 5,
                 5,
-                Enchantment.leveledCost(5, 8),
-                Enchantment.leveledCost(25, 8),
+                Enchantment.dynamicCost(5, 8),
+                Enchantment.dynamicCost(25, 8),
                 2,
-                AttributeModifierSlot.MAINHAND
+                EquipmentSlotGroup.MAINHAND
             )
-        ).exclusiveSet(
-            enchantmentLookup.getOrThrow(EnchantmentTags.DAMAGE_EXCLUSIVE_SET)
-        ).addEffect(
-            CPCEnchantmentComponentTypes.GAMERULE_DAMAGE,
-            new AddEnchantmentEffect(EnchantmentLevelBasedValue.linear(2.5f)),
-            EntityPropertiesLootCondition.builder(
+        ).exclusiveWith(
+            enchantmentLookup.getOrThrow(EnchantmentTags.DAMAGE_EXCLUSIVE)
+        ).withEffect(
+            CombatPlusEnchantmentComponentTypes.GAMERULE_DAMAGE,
+            new AddValue(LevelBasedValue.perLevel(2.5f)),
+            LootItemEntityPropertyCondition.hasProperties(
                 LootContext.EntityTarget.THIS,
-                EntityPredicate.Builder.create().type(EntityTypePredicate.create(entityLookup, tag))
+                EntityPredicate.Builder.entity().entityType(EntityTypePredicate.of(entityLookup, tag))
             )
         );
     }
