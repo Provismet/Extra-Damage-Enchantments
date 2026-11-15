@@ -18,7 +18,7 @@
           "condition": "minecraft:entity_properties",
           "entity": "this",
           "predicate": {
-            "type": "#extra-damage-enchantments:sensitive_to_voidrender"
+            "minecraft:entity_type": "#extra-damage-enchantments:sensitive_to_voidrender"
           }
         }
       }
@@ -47,7 +47,7 @@
           "condition": "minecraft:entity_properties",
           "entity": "this",
           "predicate": {
-            "type": "#extra-damage-enchantments:sensitive_to_voidrender"
+            "minecraft:entity_type": "#extra-damage-enchantments:sensitive_to_voidrender"
           }
         }
       }

@@ -5,7 +5,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider;
 import net.minecraft.core.HolderLookup.Provider;
 import net.minecraft.tags.EntityTypeTags;
-import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.EntityTypeIds;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -16,77 +16,77 @@ public class EntityTypeTagGen extends FabricTagsProvider.EntityTypeTagsProvider 
 
     @Override
     protected void addTags (Provider arg) {
-        this.valueLookupBuilder(EDEEntityTypeTags.ARCANE)
-            .add(EntityType.ALLAY)
-            .add(EntityType.BLAZE)
-            .add(EntityType.BREEZE)
-            .add(EntityType.COPPER_GOLEM)
-            .add(EntityType.IRON_GOLEM)
-            .add(EntityType.MAGMA_CUBE)
-            .add(EntityType.SLIME)
-            .add(EntityType.SNOW_GOLEM)
-            .add(EntityType.VEX);
+        this.builder(EDEEntityTypeTags.ARCANE)
+            .add(EntityTypeIds.ALLAY)
+            .add(EntityTypeIds.BLAZE)
+            .add(EntityTypeIds.BREEZE)
+            .add(EntityTypeIds.COPPER_GOLEM)
+            .add(EntityTypeIds.IRON_GOLEM)
+            .add(EntityTypeIds.MAGMA_CUBE)
+            .add(EntityTypeIds.SLIME)
+            .add(EntityTypeIds.SNOW_GOLEM)
+            .add(EntityTypeIds.VEX);
         
-        this.valueLookupBuilder(EDEEntityTypeTags.BEASTLY)
-            .add(EntityType.BAT)
-            .add(EntityType.CAMEL)
-            .add(EntityType.CAT)
-            .add(EntityType.CHICKEN)
-            .add(EntityType.COW)
-            .add(EntityType.DONKEY)
-            .add(EntityType.FOX)
-            .add(EntityType.GHAST)
-            .add(EntityType.GOAT)
-            .add(EntityType.HOGLIN)
-            .add(EntityType.HORSE)
-            .add(EntityType.LLAMA)
-            .add(EntityType.MULE)
-            .add(EntityType.OCELOT)
-            .add(EntityType.PANDA)
-            .add(EntityType.PARROT)
-            .add(EntityType.PIG)
-            .add(EntityType.POLAR_BEAR)
-            .add(EntityType.RABBIT)
-            .add(EntityType.RAVAGER)
-            .add(EntityType.SHEEP)
-            .add(EntityType.SNIFFER)
-            .add(EntityType.STRIDER)
-            .add(EntityType.TRADER_LLAMA)
-            .add(EntityType.WOLF)
-            .add(EntityType.ARMADILLO);
+        this.builder(EDEEntityTypeTags.BEASTLY)
+            .add(EntityTypeIds.BAT)
+            .add(EntityTypeIds.CAMEL)
+            .add(EntityTypeIds.CAT)
+            .add(EntityTypeIds.CHICKEN)
+            .add(EntityTypeIds.COW)
+            .add(EntityTypeIds.DONKEY)
+            .add(EntityTypeIds.FOX)
+            .add(EntityTypeIds.GHAST)
+            .add(EntityTypeIds.GOAT)
+            .add(EntityTypeIds.HOGLIN)
+            .add(EntityTypeIds.HORSE)
+            .add(EntityTypeIds.LLAMA)
+            .add(EntityTypeIds.MULE)
+            .add(EntityTypeIds.OCELOT)
+            .add(EntityTypeIds.PANDA)
+            .add(EntityTypeIds.PARROT)
+            .add(EntityTypeIds.PIG)
+            .add(EntityTypeIds.POLAR_BEAR)
+            .add(EntityTypeIds.RABBIT)
+            .add(EntityTypeIds.RAVAGER)
+            .add(EntityTypeIds.SHEEP)
+            .add(EntityTypeIds.SNIFFER)
+            .add(EntityTypeIds.STRIDER)
+            .add(EntityTypeIds.TRADER_LLAMA)
+            .add(EntityTypeIds.WOLF)
+            .add(EntityTypeIds.ARMADILLO);
 
-        this.valueLookupBuilder(EDEEntityTypeTags.FUNGIFLORAL)
-            .add(EntityType.CREEPER)
-            .add(EntityType.MOOSHROOM)
-            .add(EntityType.WARDEN);
+        this.builder(EDEEntityTypeTags.FUNGIFLORAL)
+            .add(EntityTypeIds.CREEPER)
+            .add(EntityTypeIds.MOOSHROOM)
+            .add(EntityTypeIds.WARDEN);
 
-        this.valueLookupBuilder(EDEEntityTypeTags.HUMANOID)
-            .add(EntityType.PIGLIN)
-            .add(EntityType.PIGLIN_BRUTE)
-            .add(EntityType.PLAYER)
-            .add(EntityType.VILLAGER)
-            .add(EntityType.WANDERING_TRADER)
-            .add(EntityType.WITCH);
+        this.builder(EDEEntityTypeTags.HUMANOID)
+            .add(EntityTypeIds.PIGLIN)
+            .add(EntityTypeIds.PIGLIN_BRUTE)
+            .add(EntityTypeIds.PLAYER)
+            .add(EntityTypeIds.VILLAGER)
+            .add(EntityTypeIds.WANDERING_TRADER)
+            .add(EntityTypeIds.WITCH);
 
-        this.valueLookupBuilder(EDEEntityTypeTags.OUTERWORLDLY)
-            .add(EntityType.ENDERMAN)
-            .add(EntityType.ENDER_DRAGON)
-            .add(EntityType.SHULKER);
+        this.builder(EDEEntityTypeTags.OUTERWORLDLY)
+            .add(EntityTypeIds.ENDERMAN)
+            .add(EntityTypeIds.ENDER_DRAGON)
+            .add(EntityTypeIds.SHULKER);
 
-        this.valueLookupBuilder(EDEEntityTypeTags.SENSITIVE_TO_UNRAVEL)
+        this.builder(EDEEntityTypeTags.SENSITIVE_TO_UNRAVEL)
             .addOptionalTag(EDEEntityTypeTags.ARCANE);
 
-        this.valueLookupBuilder(EDEEntityTypeTags.SENSITIVE_TO_BUTCHER)
+        this.builder(EDEEntityTypeTags.SENSITIVE_TO_BUTCHER)
             .addOptionalTag(EDEEntityTypeTags.BEASTLY);
 
-        this.valueLookupBuilder(EDEEntityTypeTags.SENSITIVE_TO_HERBICIDE)
+        this.builder(EDEEntityTypeTags.SENSITIVE_TO_HERBICIDE)
             .addOptionalTag(EDEEntityTypeTags.FUNGIFLORAL);
 
-        this.valueLookupBuilder(EDEEntityTypeTags.SENSITIVE_TO_REBEL)
+        this.builder(EDEEntityTypeTags.SENSITIVE_TO_REBEL)
             .addOptionalTag(EDEEntityTypeTags.HUMANOID)
             .addOptionalTag(EntityTypeTags.ILLAGER);
 
-        this.valueLookupBuilder(EDEEntityTypeTags.SENSITIVE_TO_VOIDRENDER)
+        this.builder(EDEEntityTypeTags.SENSITIVE_TO_VOIDRENDER)
             .addOptionalTag(EDEEntityTypeTags.OUTERWORLDLY);
     }
     
