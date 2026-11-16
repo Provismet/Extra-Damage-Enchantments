@@ -1,2 +1,1 @@
-## Changes
-- Updated to 1.21.3 Minecraft.
+- Updated to 26.x Minecraft versions.
