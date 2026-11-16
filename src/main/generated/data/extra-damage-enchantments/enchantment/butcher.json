@@ -15,7 +15,7 @@
           }
         },
         "requirements": {
-          "condition": "minecraft:entity_properties",
+          "type": "minecraft:entity_properties",
           "entity": "this",
           "predicate": {
             "minecraft:entity_type": "#extra-damage-enchantments:sensitive_to_butcher"
@@ -44,7 +44,7 @@
         },
         "enchanted": "attacker",
         "requirements": {
-          "condition": "minecraft:entity_properties",
+          "type": "minecraft:entity_properties",
           "entity": "this",
           "predicate": {
             "minecraft:entity_type": "#extra-damage-enchantments:sensitive_to_butcher"
